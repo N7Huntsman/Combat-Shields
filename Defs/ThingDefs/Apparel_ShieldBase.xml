@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="Apparel_ShieldBase" Abstract="True">
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <selectable>True</selectable>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+		<techLevel>Tribal</techLevel>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+	<tradeability>Sellable</tradeability>
+    <statBases>
+	  <ArmorRating_Blunt>0.0</ArmorRating_Blunt>
+	  <ArmorRating_Sharp>0.0</ArmorRating_Sharp>  
+	  <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+			<Beauty>-3</Beauty>
+	</statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>	
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>	
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+	<thingCategories>
+		<li>Apparel</li>
+	</thingCategories>
+	<apparel>
+	<careIfWornByCorpse>false</careIfWornByCorpse>
+	<bodyPartGroups>
+	<li>Neck</li>
+	<li>Torso</li>
+	<li>Arms</li>
+	<li>LeftHand</li>
+	<li>Waist</li>
+	</bodyPartGroups>
+	<wornGraphicPath></wornGraphicPath>
+	<layers>
+	<li>Belt</li>
+	</layers>
+	<tags>
+	<li>Neolithic</li>
+	</tags>
+	</apparel>
+	<altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+  </ThingDef>
+
+  <!-- Makeaable Shield -->
+
+	<ThingDef Name="Shield_MakeableBase" ParentName="Apparel_ShieldBase" Abstract="True">
+		<recipeMaker>
+		  <workSpeedStat>SmithingSpeed</workSpeedStat>
+		  <workSkill>Crafting</workSkill>
+		  <effectWorking>Smelt</effectWorking>
+		  <soundWorking>Recipe_Smith</soundWorking>
+		  <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+		  <defaultIngredientFilter>
+			<categories>
+			  <li>Root</li>
+			</categories>
+		  </defaultIngredientFilter>
+		</recipeMaker>
+	</ThingDef>
+	
+	  <!-- Buckler -->
+
+<ThingDef Name="Buckler_Shield" ParentName="Shield_MakeableBase" Abstract="True">
+	<apparel>
+		<bodyPartGroups>
+			<li>Shoulders</li>
+			<li>Arms</li>
+			<li>LeftHand</li>
+		</bodyPartGroups>
+		</apparel>
+</ThingDef>
+
+	  <!-- Small Shield -->
+
+<ThingDef Name="Small_Shield" ParentName="Shield_MakeableBase" Abstract="True">
+	<apparel>
+		<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>LeftHand</li>
+		</bodyPartGroups>
+	</apparel>
+</ThingDef>
+
+	  <!-- Medium Shield -->
+
+<ThingDef Name="Medium_Shield" ParentName="Shield_MakeableBase" Abstract="True">
+	<apparel>
+		<bodyPartGroups>
+			<li>Shoulders</li>
+			<li>Neck</li>
+			<li>Torso</li>
+			<li>Arms</li>
+			<li>LeftHand</li>
+			<li>Waist</li>
+		</bodyPartGroups>
+		</apparel>
+</ThingDef>
+
+	  <!-- Large Shield -->
+
+<ThingDef Name="Large_Shield" ParentName="Shield_MakeableBase" Abstract="True">
+	<apparel>
+		<bodyPartGroups>
+			<li>Shoulders</li>
+			<li>Neck</li>
+			<li>Torso</li>
+			<li>Shoulders</li>
+			<li>Arms</li>
+			<li>LeftHand</li>
+			<li>Waist</li>
+			<li>Legs</li>
+		</bodyPartGroups>
+		</apparel>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.1</MoveSpeed>
+		</equippedStatOffsets>
+</ThingDef>
+
+	  <!-- Tower Shield -->
+
+<ThingDef Name="Tower_Shield" ParentName="Shield_MakeableBase" Abstract="True">
+	<apparel>
+		<bodyPartGroups>
+			<li>Neck</li>
+			<li>Torso</li>
+			<li>Shoulders</li>
+			<li>Arms</li>
+			<li>LeftHand</li>
+			<li>Waist</li>
+			<li>Legs</li>
+		</bodyPartGroups>
+	</apparel>
+	<equippedStatOffsets>
+		<MoveSpeed>-0.25</MoveSpeed>
+	</equippedStatOffsets>
+</ThingDef>
+
+</Defs>

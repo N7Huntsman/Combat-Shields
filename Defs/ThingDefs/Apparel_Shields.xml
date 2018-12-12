@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Nguni Shield -->
+	<ThingDef ParentName="Medium_Shield">
+		<defName>Apparel_NguniShield</defName>
+		<thingClass>Shield.ColorableShield</thingClass>
+		<label>nguni shield</label>
+		<description>A lightweight shield made of leather and wood, made famous by the Zulu. Though fairly thin, it can block simple projectiles and is useful in close-quarters-combat.</description>
+		<graphicData>
+		  <texPath>Nguni_Shield</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<techLevel>Neolithic</techLevel>			
+		<costStuffCount>60</costStuffCount>
+		<costList>
+		  <WoodLog>15</WoodLog>
+		</costList>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CraftingSpot</li>
+			</recipeUsers>
+		</recipeMaker>
+		<statBases>
+		  <WorkToMake>4500</WorkToMake>
+		  <Mass>4</Mass>	
+		  <MaxHitPoints>125</MaxHitPoints>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <ArmorRating_Blunt>0.13</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+		</statBases>
+		<useHitPoints>True</useHitPoints>
+		<smeltable>True</smeltable>
+	</ThingDef>
+
+    <!-- Wicker Shield -->	
+	<ThingDef ParentName="Large_Shield">
+		<defName>Apparel_WickerShield</defName>
+		<thingClass>Shield.ColorableShield</thingClass>
+		<label>wicker shield</label>
+		<description>A lightweight shield made of wicker, once used by infantry of the ancient Persian empire. While effective against arrows and other projectiles, it is not sturdy enough to stop the thrust of a spear or sword.</description>
+		<graphicData>
+		  <texPath>Wicker_Shield</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>60</costStuffCount>
+		<techLevel>Neolithic</techLevel>	
+		<stuffCategories>
+		  <li>Woody</li>
+		</stuffCategories>
+		<recipeMaker>
+			<recipeUsers>
+				<li>CraftingSpot</li>
+			</recipeUsers>
+		</recipeMaker>
+		<statBases>
+		  <WorkToMake>6000</WorkToMake>
+		  <Mass>5.5</Mass>	
+		  <MaxHitPoints>160</MaxHitPoints>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <ArmorRating_Blunt>0.17</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+		</statBases>
+		<useHitPoints>True</useHitPoints>
+		<smeltable>True</smeltable>
+	</ThingDef>
+
+    <!-- Scutum (Roman Shield) -->	
+	<ThingDef ParentName="Large_Shield">
+		<defName>Apparel_Scutum</defName>
+		<thingClass>Shield.ColorableShield</thingClass>
+		<label>scutum</label>
+		<description>A heavy shield in Roman style designed to protect the user in hand-to-hand combat and against projectiles.</description>
+		<graphicData>
+		  <texPath>Scutum</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Medieval</techLevel>	
+		<costStuffCount>70</costStuffCount>
+		<stuffCategories>
+		  <li>Woody</li>
+		</stuffCategories>
+		<costList>
+		  <Steel>10</Steel>
+		</costList>		
+		<recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+		  <recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>		
+		  </recipeUsers>
+		</recipeMaker>
+		<statBases>
+		  <WorkToMake>10000</WorkToMake>
+		  <Mass>7</Mass>	
+		  <MaxHitPoints>180</MaxHitPoints>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.23</ArmorRating_Sharp>
+		</statBases>
+		<useHitPoints>True</useHitPoints>
+		<smeltable>True</smeltable>
+	</ThingDef>
+
+    <!-- Norse Shield -->
+	<ThingDef ParentName="Medium_Shield">
+		<defName>Apparel_NordShield</defName>
+		<thingClass>Shield.ColorableShield</thingClass>
+		<label>norse shield</label>
+		<description>A heavy shield in Norse style, it was famously carried by the vikings on their raids into Western Europe. Designed to protect the user in hand-to-hand combat and against projectiles. Made of thick timber with a heavy iron rim, it is quite sturdy.</description>
+		<graphicData>
+		  <texPath>Nord/Nordic_Shield</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Medieval</techLevel>	
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+		  <li>Woody</li>
+		</stuffCategories>	
+		<costList>
+		  <Steel>10</Steel>
+		</costList>
+		<recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+		  <recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>		
+		  </recipeUsers>
+		</recipeMaker>
+		<statBases>
+		  <WorkToMake>11000</WorkToMake>
+		  <Mass>8.5</Mass>	
+		  <MaxHitPoints>195</MaxHitPoints>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <ArmorRating_Blunt>0.22</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+		</statBases>
+		<useHitPoints>True</useHitPoints>
+		<smeltable>True</smeltable>
+	</ThingDef>
+
+    <!-- Kite Shield -->
+	<ThingDef ParentName="Large_Shield">
+		<defName>Apparel_KiteShield</defName>
+		<thingClass>Shield.ColorableShield</thingClass>
+		<label>kite shield</label>
+		<description>A heavy shield that covers the legs made popular by the Normans. Made of thick wood, it is designed to protect the user in hand-to-hand combat and against projectiles. It offers good protection, but restricts use of two-handed weapons.</description>
+		<graphicData>
+		  <texPath>Kite/Kite_Shield</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Medieval</techLevel>	
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+		  <li>Woody</li>
+		</stuffCategories>
+		<recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+		  <recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>		
+		  </recipeUsers>
+		</recipeMaker>
+		<statBases>
+		  <WorkToMake>11500</WorkToMake>
+		  <Mass>8</Mass>	
+		  <MaxHitPoints>195</MaxHitPoints>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+		</statBases>
+		<useHitPoints>True</useHitPoints>
+		<smeltable>True</smeltable>
+	</ThingDef>
+
+    <!-- Crusader Kite Shield -->
+	<ThingDef ParentName="Large_Shield">
+		<defName>Apparel_CrusaderShield</defName>
+		<thingClass>Shield.ColorableShield</thingClass>
+		<label>crusader's kite shield</label>
+		<description>A heavy shield that covers the legs made popular by the Normans, bearing the crimson symbol of the Crusaders.. Made of thick wood, it is designed to protect the user in hand-to-hand combat and against projectiles. It offers good protection, but restricts use of two-handed weapons.</description>
+		<graphicData>
+		  <texPath>Crusader/Crusader_Shield</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Medieval</techLevel>	
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+		  <li>Woody</li>
+		</stuffCategories>
+		<recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+		  <recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>		
+		  </recipeUsers>
+		</recipeMaker>
+		<statBases>
+		  <WorkToMake>11500</WorkToMake>
+		  <Mass>8</Mass>	
+		  <MaxHitPoints>195</MaxHitPoints>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+		</statBases>
+		<useHitPoints>True</useHitPoints>
+		<smeltable>True</smeltable>
+	</ThingDef>
+
+    <!-- Buckler Shield -->
+	<ThingDef ParentName="Buckler_Shield">
+		<defName>Apparel_BucklerShield</defName>
+		<thingClass>Shield.ColorableShield</thingClass>
+		<label>Buckler</label>
+		<description>An extremely small metal shield, usually paired with a rapier or similiarly light sword. Too small to offer any meaningful protection from incoming projectiles, the buckler is instead designed to deflect and trap a foe's weaopon in close-quarters combat.</description>
+		<graphicData>
+		  <texPath>Buckler</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Medieval</techLevel>	
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+		  <li>Metallic</li>
+		</stuffCategories>
+		<recipeMaker>
+	  <researchPrerequisite>Smithing</researchPrerequisite>		
+		  <recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>		
+		  </recipeUsers>
+		</recipeMaker>
+		<statBases>
+		  <WorkToMake>10500</WorkToMake>
+		  <Mass>8</Mass>	
+		  <MaxHitPoints>150</MaxHitPoints>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+		</statBases>
+		<useHitPoints>True</useHitPoints>
+		<smeltable>True</smeltable>
+		<equippedStatOffsets>
+			<MeleeHitChance>0.1</MeleeHitChance>
+		</equippedStatOffsets>		
+	</ThingDef>	
+	
+    <!-- Riot Shield -->
+	<ThingDef ParentName="Large_Shield">
+		<defName>Apparel_RiotShield</defName>
+		<thingClass>Shield.ColorableShield</thingClass>
+		<label>riot shield</label>
+		<description>A lightweight metal shield designed to protect the user against thrown objects and melee attack, but is not thick enough to stop gunfire or other armor-piercing projectiles. It can cover most of the wearer's body but restricts use of two-handed weapons.</description>
+		<graphicData>
+		  <texPath>Riot_Shield</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Industrial</techLevel>	
+			<costStuffCount>70</costStuffCount>
+			<stuffCategories>
+			  <li>Metallic</li>
+			</stuffCategories>
+		<recipeMaker>
+		  <researchPrerequisite>Machining</researchPrerequisite>		
+		  <recipeUsers>
+			<li>TableMachining</li>
+		  </recipeUsers>
+		</recipeMaker>
+		<statBases>
+		  <WorkToMake>14000</WorkToMake>
+		  <Mass>7</Mass>	
+		  <MaxHitPoints>200</MaxHitPoints>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.21</ArmorRating_Sharp>
+		</statBases>
+		<useHitPoints>True</useHitPoints>
+		<smeltable>True</smeltable>
+	</ThingDef>
+
+	<!-- Assault Shield -->
+	<ThingDef ParentName="Medium_Shield">
+		<defName>Apparel_AssaultShield</defName>
+		<thingClass>Shield.ColorableShield</thingClass>
+		<label>assault shield</label>
+		<description>An advanced shield with integrated sensors to assist with balancing to make it easier to handle. Smaller and lighter than a full-sized ballistic shield, it is designed to protect the user from gunfire. Favoring speed and reduced weight over protection, it is less cumbersome than most shields.</description>
+		<graphicData>
+		  <texPath>Assault_Shield</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Industrial</techLevel>	
+		<costStuffCount>65</costStuffCount>
+		<costList>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+			<stuffCategories>
+			  <li>Metallic</li>
+			</stuffCategories>
+		<recipeMaker>
+		  <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>		
+		  <recipeUsers>
+			<li>TableMachining</li>
+		  </recipeUsers>
+		</recipeMaker>
+		<statBases>
+		  <WorkToMake>17000</WorkToMake>
+		  <Mass>7</Mass>	
+		  <MaxHitPoints>225</MaxHitPoints>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+		</statBases>
+		<useHitPoints>True</useHitPoints>
+		<smeltable>True</smeltable>
+	</ThingDef>
+
+	<!-- Ballistic Shield -->
+	<ThingDef ParentName="Tower_Shield">
+		<defName>Apparel_BallisticShield</defName>
+		<thingClass>Shield.ColorableShield</thingClass>
+		<label>ballistic shield</label>
+		<description>A heavy shield made of advanced alloys and designed to withstand high-caliber gunfire.</description>
+		<graphicData>
+		  <texPath>Ballistic_Shield</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Industrial</techLevel>	
+		<costStuffCount>100</costStuffCount>
+		<costList>
+			<ComponentIndustrial>6</ComponentIndustrial>
+		</costList>
+			<stuffCategories>
+			  <li>Metallic</li>
+			</stuffCategories>
+		<recipeMaker>
+		  <researchPrerequisite>Fabrication</researchPrerequisite>		
+		  <recipeUsers>
+			<li>TableMachining</li>
+		  </recipeUsers>
+		</recipeMaker>
+		<statBases>
+		  <WorkToMake>200</WorkToMake>
+		  <Mass>11</Mass>	
+		  <MaxHitPoints>260</MaxHitPoints>
+		  <DeteriorationRate>1</DeteriorationRate>
+		  <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+		</statBases>
+		<equippedStatOffsets>
+			<MeleeHitChance>-0.1</MeleeHitChance>
+		</equippedStatOffsets>		
+		<useHitPoints>True</useHitPoints>
+		<smeltable>True</smeltable>
+	</ThingDef>
+	
+</Defs>
