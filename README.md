@@ -1,6 +1,8 @@
 # Combat-Shields
+-- Description
 Additional types of shields from a variety of eras, usable with melee and certain ranged weapons. Designed by different cultures for different roles, they allow further specialization of colonists equipped with shields depending upon their role in combat and duty around the colony. Feel free to leave suggestions for more shields in the comments below.
 
+-- Features
 Nguni Shield:
 Recipe: 15 x Wood, 45 x Leather
 Description: A design originating amongst the Nguni people of South Africa, this lightweight shield--traditionally made from cowhide--was most famously used by the Zulu. Designed with offensive purposes in mind, it is not thick enough to protect the user against sustained fire, but in skilled hands is extremely effective in hand-to-hand combat.
