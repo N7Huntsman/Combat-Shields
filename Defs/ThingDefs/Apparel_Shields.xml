@@ -3,7 +3,7 @@
 
     <!-- Nguni Shield -->
 	<ThingDef ParentName="Medium_Shield">
-		<defName>Apparel_NguniShield</defName>
+		<defName>Shield_NguniShield</defName>
 		<thingClass>Shield.ColorableShield</thingClass>
 		<label>nguni shield</label>
 		<description>A lightweight shield made of leather and wood, made famous by the Zulu. Though fairly thin, it can block simple projectiles and is useful in close-quarters-combat.</description>
@@ -39,7 +39,7 @@
 
     <!-- Wicker Shield -->	
 	<ThingDef ParentName="Large_Shield">
-		<defName>Apparel_WickerShield</defName>
+		<defName>Shield_WickerShield</defName>
 		<thingClass>Shield.ColorableShield</thingClass>
 		<label>wicker shield</label>
 		<description>A lightweight shield made of wicker, once used by infantry of the ancient Persian empire. While effective against arrows and other projectiles, it is not sturdy enough to stop the thrust of a spear or sword.</description>
@@ -72,7 +72,7 @@
 
     <!-- Aspis (Greek Shield) -->	
 	<ThingDef ParentName="Large_Shield">
-		<defName>Apparel_Aspis</defName>
+		<defName>Shield_Aspis</defName>
 		<thingClass>Shield.ColorableShield</thingClass>
 		<label>aspis</label>
 		<description>A convex shield made of wood and often covered with a thin sheet of bronze or other metal.</description>
@@ -110,7 +110,7 @@
 	
     <!-- Scutum (Roman Shield) -->	
 	<ThingDef ParentName="Large_Shield">
-		<defName>Apparel_Scutum</defName>
+		<defName>Shield_Scutum</defName>
 		<thingClass>Shield.ColorableShield</thingClass>
 		<label>scutum</label>
 		<description>A heavy shield in Roman style designed to protect the user in hand-to-hand combat and against projectiles.</description>
@@ -148,12 +148,12 @@
 
     <!-- Norse Shield -->
 	<ThingDef ParentName="Medium_Shield">
-		<defName>Apparel_NordShield</defName>
+		<defName>Shield_NordShield</defName>
 		<thingClass>Shield.ColorableShield</thingClass>
 		<label>norse shield</label>
 		<description>A heavy shield in Norse style, it was famously carried by the vikings on their raids into Western Europe. Designed to protect the user in hand-to-hand combat and against projectiles. Made of thick timber with a heavy iron rim, it is quite sturdy.</description>
 		<graphicData>
-		  <texPath>Nord/Nordic_Shield</texPath>
+		  <texPath>Nordic_Shield</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techLevel>Medieval</techLevel>	
@@ -186,12 +186,12 @@
 
     <!-- Kite Shield -->
 	<ThingDef ParentName="Large_Shield">
-		<defName>Apparel_KiteShield</defName>
+		<defName>Shield_KiteShield</defName>
 		<thingClass>Shield.ColorableShield</thingClass>
 		<label>kite shield</label>
 		<description>A heavy shield that covers the legs made popular by the Normans. Made of thick wood, it is designed to protect the user in hand-to-hand combat and against projectiles. It offers good protection, but restricts use of two-handed weapons.</description>
 		<graphicData>
-		  <texPath>Kite/Kite_Shield</texPath>
+		  <texPath>Kite_Shield</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techLevel>Medieval</techLevel>	
@@ -221,12 +221,12 @@
 
     <!-- Crusader Kite Shield -->
 	<ThingDef ParentName="Large_Shield">
-		<defName>Apparel_CrusaderShield</defName>
+		<defName>Shield_CrusaderShield</defName>
 		<thingClass>Shield.ColorableShield</thingClass>
 		<label>crusader's kite shield</label>
 		<description>A heavy shield that covers the legs made popular by the Normans, bearing the crimson symbol of the Crusaders.. Made of thick wood, it is designed to protect the user in hand-to-hand combat and against projectiles. It offers good protection, but restricts use of two-handed weapons.</description>
 		<graphicData>
-		  <texPath>Crusader/Crusader_Shield</texPath>
+		  <texPath>Crusader_Shield</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techLevel>Medieval</techLevel>	
@@ -256,7 +256,7 @@
 
     <!-- Buckler Shield -->
 	<ThingDef ParentName="Buckler_Shield">
-		<defName>Apparel_BucklerShield</defName>
+		<defName>Shield_BucklerShield</defName>
 		<thingClass>Shield.ColorableShield</thingClass>
 		<label>buckler</label>
 		<description>An extremely small metal shield, usually paired with a rapier or similiarly light sword. Too small to offer any meaningful protection from incoming projectiles, the buckler is instead designed to deflect and trap a foe's weapon in close-quarters combat.</description>
@@ -293,7 +293,7 @@
 	
     <!-- Riot Shield -->
 	<ThingDef ParentName="Large_Shield">
-		<defName>Apparel_RiotShield</defName>
+		<defName>Shield_RiotShield</defName>
 		<thingClass>Shield.ColorableShield</thingClass>
 		<label>riot shield</label>
 		<description>A lightweight metal shield designed to protect the user against thrown objects and melee attack, but is not thick enough to stop gunfire or other armor-piercing projectiles. It can cover most of the wearer's body but restricts use of two-handed weapons.</description>
@@ -326,7 +326,7 @@
 
 	<!-- Assault Shield -->
 	<ThingDef ParentName="Medium_Shield">
-		<defName>Apparel_AssaultShield</defName>
+		<defName>Shield_AssaultShield</defName>
 		<thingClass>Shield.ColorableShield</thingClass>
 		<label>assault shield</label>
 		<description>An advanced shield with integrated sensors to assist with balancing to make it easier to handle. Smaller and lighter than a full-sized ballistic shield, it is designed to protect the user from gunfire. Favoring speed and reduced weight over protection, it is less cumbersome than most shields.</description>
@@ -362,7 +362,7 @@
 
 	<!-- Ballistic Shield -->
 	<ThingDef ParentName="Tower_Shield">
-		<defName>Apparel_BallisticShield</defName>
+		<defName>Shield_BallisticShield</defName>
 		<thingClass>Shield.ColorableShield</thingClass>
 		<label>ballistic shield</label>
 		<description>A heavy shield made of advanced alloys and designed to withstand high-caliber gunfire.</description>
