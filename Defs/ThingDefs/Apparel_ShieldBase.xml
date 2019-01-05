@@ -37,31 +37,31 @@
       <li>ITab_Art</li>
     </inspectorTabs>
 	<thingCategories>
-		<li>Apparel</li>
+		<li>Shield</li>
 	</thingCategories>
 	<apparel>
-	<careIfWornByCorpse>false</careIfWornByCorpse>
-	<bodyPartGroups>
-	<li>Neck</li>
-	<li>Torso</li>
-	<li>Arms</li>
-	<li>LeftHand</li>
-	<li>Waist</li>
-	</bodyPartGroups>
-	<wornGraphicPath></wornGraphicPath>
-	<layers>
-	<li>Belt</li>
-	</layers>
-	<tags>
-	<li>Neolithic</li>
-	</tags>
+		<careIfWornByCorpse>false</careIfWornByCorpse>
+		<bodyPartGroups>
+		<li>Neck</li>
+		<li>Torso</li>
+		<li>Arms</li>
+		<li>LeftHand</li>
+		<li>Waist</li>
+		</bodyPartGroups>
+		<wornGraphicPath></wornGraphicPath>
+		<layers>
+		<li>Belt</li>
+		</layers>
+		<tags>
+		<li>Neolithic</li>
+		</tags>
 	</apparel>
 	<altitudeLayer>Item</altitudeLayer>
     <alwaysHaulable>True</alwaysHaulable>
     <tickerType>Never</tickerType>
   </ThingDef>
 
-  <!-- Makeaable Shield -->
+  <!-- Makeable Shield -->
 
 	<ThingDef Name="Shield_MakeableBase" ParentName="Apparel_ShieldBase" Abstract="True">
 		<recipeMaker>
@@ -87,7 +87,11 @@
 			<li>Arms</li>
 			<li>LeftHand</li>
 		</bodyPartGroups>
-		</apparel>
+	</apparel>
+	<equippedStatOffsets>
+		<ShootingAccuracyPawn>-0.05</ShootingAccuracyPawn>
+		<MeleeDodgeChance>0.04</MeleeDodgeChance>				
+	</equippedStatOffsets>		
 </ThingDef>
 
 	  <!-- Small Shield -->
@@ -101,6 +105,9 @@
 				<li>LeftHand</li>
 		</bodyPartGroups>
 	</apparel>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>-0.05</ShootingAccuracyPawn>			
+		</equippedStatOffsets>		
 </ThingDef>
 
 	  <!-- Medium Shield -->
@@ -116,6 +123,9 @@
 			<li>Waist</li>
 		</bodyPartGroups>
 		</apparel>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>-0.1</ShootingAccuracyPawn>			
+		</equippedStatOffsets>		
 </ThingDef>
 
 	  <!-- Large Shield -->
@@ -135,6 +145,7 @@
 		</apparel>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.1</MoveSpeed>
+			<ShootingAccuracyPawn>-0.1</ShootingAccuracyPawn>			
 		</equippedStatOffsets>
 </ThingDef>
 
@@ -154,6 +165,9 @@
 	</apparel>
 	<equippedStatOffsets>
 		<MoveSpeed>-0.25</MoveSpeed>
+		<ShootingAccuracyPawn>-0.15</ShootingAccuracyPawn>
+		<MeleeDodgeChance>-0.02</MeleeDodgeChance>
+		<AimingDelayFactor>0.05</AimingDelayFactor>				
 	</equippedStatOffsets>
 </ThingDef>
 
