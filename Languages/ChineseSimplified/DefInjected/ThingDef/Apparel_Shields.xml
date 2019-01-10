@@ -13,6 +13,12 @@
   <Apparel_WickerShield.description>由柳条编织而成的轻型盾牌，曾被古代波斯帝国步兵所使用。虽然对箭等投射物有防护效果，但其本身并不结实，无法阻挡矛或剑的刺击。</Apparel_WickerShield.description>
 
 
+  <!-- Aspis (Greek Shield) -->
+
+  <Apparel_Aspis.label>希腊盾</Apparel_Aspis.label>
+  <Apparel_Aspis.description>斯巴达人曾经使用过这种木制盾牌，有些希腊盾的会在边缘附加铜片或者其它金属。</Apparel_Aspis.description>
+
+
   <!-- Scutum (Roman Shield) -->
 
   <Apparel_Scutum.label>塔盾</Apparel_Scutum.label>
@@ -22,19 +28,25 @@
   <!-- Norse Shield -->
 
   <Apparel_NordShield.label>维京盾</Apparel_NordShield.label>
-  <Apparel_NordShield.description>维京人劫掠西欧时所使用的，北欧风格重型盾牌。由包铁边的厚实的木材制成，非常坚固能够在面对面的近身搏斗中保护使用者的同时防护来自投射武器的伤害。</Apparel_NordShield.description>
+  <Apparel_NordShield.description>维京人劫掠西欧时所使用的北欧风格重型盾牌。由包铁边的厚实的木材制成，非常坚固能够在面对面的近身搏斗中保护使用者的同时防护来自投射武器的伤害。</Apparel_NordShield.description>
 
 
   <!-- Kite Shield -->
 
   <Apparel_KiteShield.label>鸢盾</Apparel_KiteShield.label>
-  <Apparel_KiteShield.description>诺曼人所喜爱的一种重型盾牌。由厚实的木材制成，在面对面的近身搏斗中保护使用者的同时防护来自投射武器的伤害。鸢盾的长度让持有者无法使用双手武器，但它为使用者的肩、躯干和腿提供了良好的防护。</Apparel_KiteShield.description>
+  <Apparel_KiteShield.description>诺曼人所钟爱的一种重型盾牌。由厚实的木材制成，在面对面的近身搏斗中保护使用者的同时防护来自投射武器的伤害。鸢盾的长度让持有者无法使用双手武器，但它为使用者的肩、躯干和腿提供了良好的防护。</Apparel_KiteShield.description>
 
 
   <!-- Crusader Kite Shield -->
 
   <Apparel_CrusaderShield.label>十字军鸢盾</Apparel_CrusaderShield.label>
-  <Apparel_CrusaderShield.description>诺曼人所喜爱的一种重型盾牌的十字军盾徽版本。由厚实的木材制成，在面对面的近身搏斗中保护使用者的同时防护来自投射武器的伤害。鸢盾的长度让持有者无法使用双手武器，但它为使用者的肩、躯干和腿提供了良好的防护。</Apparel_CrusaderShield.description>
+  <Apparel_CrusaderShield.description>诺曼人所钟爱的一种重型盾牌的十字军盾徽版本。由厚实的木材制成，在面对面的近身搏斗中保护使用者的同时防护来自投射武器的伤害。鸢盾的长度让持有者无法使用双手武器，但它为使用者的肩、躯干和腿提供了良好的防护。</Apparel_CrusaderShield.description>
+
+
+  <!-- Pavise Shield -->
+
+  <Apparel_Pavise.label>巨盾</Apparel_Pavise.label>
+  <Apparel_Pavise.description>热那亚巨盾弩兵曾经使用过这种巨大的木制长方形盾牌，巨盾可以手持也能直接用底部的钉子插入泥土放置在地上。（游戏中就不用想了）使用者可以惬意的蹲在巨盾后面相对安全的装填武器然后射击敌人。用于太过沉重，巨盾在肉搏战中的表现很糟糕。</Apparel_Pavise.description>
 
 
   <!-- Buckler Shield -->

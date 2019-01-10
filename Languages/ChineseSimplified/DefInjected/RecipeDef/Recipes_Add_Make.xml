@@ -17,6 +17,10 @@
 
   <!-- Recipe Users: FueledSmithy, ElectricSmithy -->
 
+  <Make_Apparel_Aspis.label>制作希腊盾</Make_Apparel_Aspis.label>
+  <Make_Apparel_Aspis.description>制作希腊盾。</Make_Apparel_Aspis.description>
+  <Make_Apparel_Aspis.jobString>正在制作制作希腊盾。</Make_Apparel_Aspis.jobString>
+
   <Make_Apparel_Scutum.label>制作塔盾</Make_Apparel_Scutum.label>
   <Make_Apparel_Scutum.description>制作塔盾。</Make_Apparel_Scutum.description>
   <Make_Apparel_Scutum.jobString>正在制作塔盾。</Make_Apparel_Scutum.jobString>
@@ -32,6 +36,10 @@
   <Make_Apparel_CrusaderShield.label>制作十字军鸢盾</Make_Apparel_CrusaderShield.label>
   <Make_Apparel_CrusaderShield.description>制作十字军鸢盾。</Make_Apparel_CrusaderShield.description>
   <Make_Apparel_CrusaderShield.jobString>正在制作十字军鸢盾。</Make_Apparel_CrusaderShield.jobString>
+
+  <Make_Apparel_Pavise.label>制作巨盾</Make_Apparel_Pavise.label>
+  <Make_Apparel_Pavise.description>制作巨盾。</Make_Apparel_Pavise.description>
+  <Make_Apparel_Pavise.jobString>正在制作巨盾。</Make_Apparel_Pavise.jobString>
 
   <Make_Apparel_BucklerShield.label>制作小圆盾</Make_Apparel_BucklerShield.label>
   <Make_Apparel_BucklerShield.description>制作小圆盾。</Make_Apparel_BucklerShield.description>
