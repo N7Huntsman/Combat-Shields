@@ -51,12 +51,12 @@
    </Operation>  
    
 <!-- Don't certain melee weapons to be used with shields -->   
-<!--
+<!-- Example/Testing
    <Operation Class="PatchOperationAdd">
    <xpath>/Defs/ThingDef[defName="MeleeWeapon_Gladius"]/weaponTags</xpath>
    <value>
 	<li>Shield_NoSidearm</li>
    </value>
    </Operation>   
- -->
+-->
 </Patch>   
