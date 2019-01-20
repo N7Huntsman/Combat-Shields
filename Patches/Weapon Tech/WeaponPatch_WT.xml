@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+	<operations>
+	<li Class="PatchOperationFindMod">
+	<mods>
+		<li>Weapon Tech</li>
+	</mods>
+	</li>
+	
+<!-- Allow certain ranged weapons to be used with shields -->
+   <li Class="PatchOperationAdd">
+   <xpath>/Defs/ThingDef[defName="Gun_MatchlockPistol"]</xpath>
+   <value>
+	   <weaponTags>
+		<li>Shield_Sidearm</li>
+	   </weaponTags>	
+   </value>
+   </li>
+
+   <li Class="PatchOperationAdd">
+   <xpath>/Defs/ThingDef[defName="Gun_SubmachineGun"]</xpath>
+   <value>
+	   <weaponTags>
+		<li>Shield_Sidearm</li>
+	   </weaponTags>	
+   </value>
+   </li>
+
+   <li Class="PatchOperationAdd">
+   <xpath>/Defs/ThingDef[defName="Gun_BoltActionPistol"]/weaponTags</xpath>
+   <value>
+		<li>Shield_Sidearm</li>	
+   </value>
+   </li>  
+ 
+   <li Class="PatchOperationAdd">
+   <xpath>/Defs/ThingDef[defName="Gun_LargeRevolver"]/weaponTags</xpath>
+   <value>
+		<li>Shield_Sidearm</li>	
+   </value>
+   </li>
+
+   <li Class="PatchOperationAdd">
+   <xpath>/Defs/ThingDef[defName="Gun_UrbanPistol"]/weaponTags</xpath>
+   <value>
+		<li>Shield_Sidearm</li>	
+   </value>
+   </li>
+
+   <li Class="PatchOperationAdd">
+   <xpath>/Defs/ThingDef[defName="Gun_ServicePistol"]/weaponTags</xpath>
+   <value>
+	<li>Shield_Sidearm</li>
+   </value>
+   </li>
+   
+   <li Class="PatchOperationAdd">
+   <xpath>/Defs/ThingDef[defName="Gun_SawnOffShotgun"]/weaponTags</xpath>
+   <value>
+	<li>Shield_Sidearm</li>
+   </value>
+   </li>
+   
+   <li Class="PatchOperationAdd">
+   <xpath>/Defs/ThingDef[defName="Gun_ChargePistol"]</xpath>
+   <value>
+	   <weaponTags>
+		<li>Shield_Sidearm</li>
+	   </weaponTags>	
+   </value>
+   </li>
+
+   <li Class="PatchOperationAdd">
+   <xpath>/Defs/ThingDef[defName="Gun_PolymerSubmachineGun"]/weaponTags</xpath>
+   <value>
+		<li>Shield_Sidearm</li>
+   </value>
+   </li>
+   
+   <li Class="PatchOperationAdd">
+   <xpath>/Defs/ThingDef[defName="Gun_CombatPDW"]/weaponTags</xpath>
+   <value>
+		<li>Shield_Sidearm</li>
+   </value>
+   </li>   
+   
+<!-- Don't allow certain melee weapons to be used with shields -->   
+   <li Class="PatchOperationAdd">
+   <xpath>/Defs/ThingDef[defName="MeleeWeapon_Katana"]/weaponTags</xpath>
+   <value>
+		<li>Shield_NoSidearm</li>
+   </value>
+   </li>  
+
+   </operations>
+</Operation>
+   
+</Patch>   
