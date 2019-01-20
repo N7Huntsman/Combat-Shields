@@ -7,7 +7,7 @@
     <selectable>True</selectable>
     <pathCost>10</pathCost>
     <useHitPoints>True</useHitPoints>
-		<techLevel>Tribal</techLevel>
+		<techLevel>Neolithic</techLevel>
     <graphicData>
       <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
     </graphicData>
@@ -53,7 +53,7 @@
 		<li>Belt</li>
 		</layers>
 		<tags>
-		<li>Neolithic</li>
+		<li>Shield</li>
 		</tags>
 	</apparel>
 	<altitudeLayer>Item</altitudeLayer>
@@ -90,7 +90,7 @@
 	</apparel>
 	<equippedStatOffsets>
 		<ShootingAccuracyPawn>-0.05</ShootingAccuracyPawn>
-		<MeleeDodgeChance>0.04</MeleeDodgeChance>				
+		<MeleeDodgeChance>0.08</MeleeDodgeChance>				
 	</equippedStatOffsets>		
 </ThingDef>
 
@@ -106,7 +106,9 @@
 		</bodyPartGroups>
 	</apparel>
 		<equippedStatOffsets>
-			<ShootingAccuracyPawn>-0.05</ShootingAccuracyPawn>			
+			<ShootingAccuracyPawn>-0.05</ShootingAccuracyPawn>
+			<AimingDelayFactor>0.02</AimingDelayFactor>
+			<MeleeDodgeChance>0.02</MeleeDodgeChance>				
 		</equippedStatOffsets>		
 </ThingDef>
 
@@ -124,7 +126,8 @@
 		</bodyPartGroups>
 		</apparel>
 		<equippedStatOffsets>
-			<ShootingAccuracyPawn>-0.1</ShootingAccuracyPawn>			
+			<ShootingAccuracyPawn>-0.1</ShootingAccuracyPawn>
+			<AimingDelayFactor>0.05</AimingDelayFactor>				
 		</equippedStatOffsets>		
 </ThingDef>
 
@@ -145,7 +148,9 @@
 		</apparel>
 		<equippedStatOffsets>
 			<MoveSpeed>-0.1</MoveSpeed>
-			<ShootingAccuracyPawn>-0.1</ShootingAccuracyPawn>			
+			<MeleeDodgeChance>-0.05</MeleeDodgeChance>			
+			<ShootingAccuracyPawn>-0.1</ShootingAccuracyPawn>
+			<AimingDelayFactor>0.05</AimingDelayFactor>				
 		</equippedStatOffsets>
 </ThingDef>
 
@@ -161,13 +166,14 @@
 			<li>LeftHand</li>
 			<li>Waist</li>
 			<li>Legs</li>
+			<li>FullHead</li>			
 		</bodyPartGroups>
 	</apparel>
 	<equippedStatOffsets>
 		<MoveSpeed>-0.25</MoveSpeed>
 		<ShootingAccuracyPawn>-0.15</ShootingAccuracyPawn>
-		<MeleeDodgeChance>-0.02</MeleeDodgeChance>
-		<AimingDelayFactor>0.05</AimingDelayFactor>				
+		<MeleeDodgeChance>-0.10</MeleeDodgeChance>
+		<AimingDelayFactor>0.10</AimingDelayFactor>				
 	</equippedStatOffsets>
 </ThingDef>
 
