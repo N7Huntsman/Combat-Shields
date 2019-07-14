@@ -42,18 +42,14 @@
 	<apparel>
 		<careIfWornByCorpse>false</careIfWornByCorpse>
 		<bodyPartGroups>
-		<li>Neck</li>
-		<li>Torso</li>
-		<li>Arms</li>
-		<li>LeftHand</li>
-		<li>Waist</li>
+			<li>LeftHand</li>
 		</bodyPartGroups>
 		<wornGraphicPath></wornGraphicPath>
 		<layers>
-		<li>Belt</li>
+			<li>Belt</li>
 		</layers>
 		<tags>
-		<li>Shield</li>
+			<li>Shield</li>
 		</tags>
 	</apparel>
 	<altitudeLayer>Item</altitudeLayer>
@@ -82,15 +78,15 @@
 
 <ThingDef Name="Buckler_Shield" ParentName="Shield_MakeableBase" Abstract="True">
 	<apparel>
-		<bodyPartGroups>
+		<bodyPartGroups Inherit="False">
 			<li>Shoulders</li>
 			<li>Arms</li>
 			<li>LeftHand</li>
 		</bodyPartGroups>
 	</apparel>
 	<equippedStatOffsets>
-		<ShootingAccuracyPawn>-0.05</ShootingAccuracyPawn>
-		<MeleeDodgeChance>0.08</MeleeDodgeChance>				
+		<ShootingAccuracyPawn>-1.5</ShootingAccuracyPawn>
+		<MeleeDodgeChance>0.15</MeleeDodgeChance>				
 	</equippedStatOffsets>		
 </ThingDef>
 
@@ -98,17 +94,16 @@
 
 <ThingDef Name="Small_Shield" ParentName="Shield_MakeableBase" Abstract="True">
 	<apparel>
-		<bodyPartGroups>
-				<li>Shoulders</li>
-				<li>Torso</li>
-				<li>Arms</li>
-				<li>LeftHand</li>
+		<bodyPartGroups Inherit="False">
+			<li>Torso</li>
+			<li>Arms</li>
 		</bodyPartGroups>
 	</apparel>
 		<equippedStatOffsets>
-			<ShootingAccuracyPawn>-0.05</ShootingAccuracyPawn>
-			<AimingDelayFactor>0.02</AimingDelayFactor>
-			<MeleeDodgeChance>0.02</MeleeDodgeChance>				
+			<MeleeHitChance>-0.05</MeleeHitChance>			
+			<ShootingAccuracyPawn>-2</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.1</AimingDelayFactor>
+			<MeleeDodgeChance>0.1</MeleeDodgeChance>				
 		</equippedStatOffsets>		
 </ThingDef>
 
@@ -116,18 +111,18 @@
 
 <ThingDef Name="Medium_Shield" ParentName="Shield_MakeableBase" Abstract="True">
 	<apparel>
-		<bodyPartGroups>
+		<bodyPartGroups Inherit="False">
 			<li>Shoulders</li>
-			<li>Neck</li>
 			<li>Torso</li>
 			<li>Arms</li>
-			<li>LeftHand</li>
-			<li>Waist</li>
 		</bodyPartGroups>
 		</apparel>
 		<equippedStatOffsets>
-			<ShootingAccuracyPawn>-0.1</ShootingAccuracyPawn>
-			<AimingDelayFactor>0.05</AimingDelayFactor>				
+			<MeleeHitChance>-0.1</MeleeHitChance>			
+			<MoveSpeed>-0.75</MoveSpeed>		
+			<ShootingAccuracyPawn>-4</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.25</AimingDelayFactor>
+			<MeleeDodgeChance>-0.4</MeleeDodgeChance>				
 		</equippedStatOffsets>		
 </ThingDef>
 
@@ -135,22 +130,21 @@
 
 <ThingDef Name="Large_Shield" ParentName="Shield_MakeableBase" Abstract="True">
 	<apparel>
-		<bodyPartGroups>
+		<bodyPartGroups Inherit="False">
 			<li>Shoulders</li>
-			<li>Neck</li>
 			<li>Torso</li>
 			<li>Shoulders</li>
 			<li>Arms</li>
 			<li>LeftHand</li>
-			<li>Waist</li>
 			<li>Legs</li>
 		</bodyPartGroups>
 		</apparel>
 		<equippedStatOffsets>
-			<MoveSpeed>-0.1</MoveSpeed>
-			<MeleeDodgeChance>-0.05</MeleeDodgeChance>			
-			<ShootingAccuracyPawn>-0.1</ShootingAccuracyPawn>
-			<AimingDelayFactor>0.05</AimingDelayFactor>				
+			<MeleeHitChance>-0.15</MeleeHitChance>			
+			<MoveSpeed>-1.25</MoveSpeed>
+			<MeleeDodgeChance>-0.6</MeleeDodgeChance>			
+			<ShootingAccuracyPawn>-4</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.3</AimingDelayFactor>				
 		</equippedStatOffsets>
 </ThingDef>
 
@@ -158,22 +152,21 @@
 
 <ThingDef Name="Tower_Shield" ParentName="Shield_MakeableBase" Abstract="True">
 	<apparel>
-		<bodyPartGroups>
-			<li>Neck</li>
+		<bodyPartGroups Inherit="False">
 			<li>Torso</li>
 			<li>Shoulders</li>
 			<li>Arms</li>
-			<li>LeftHand</li>
-			<li>Waist</li>
 			<li>Legs</li>
-			<li>FullHead</li>			
+			<li>FullHead</li>
+			<li>Feet</li>			
 		</bodyPartGroups>
 	</apparel>
 	<equippedStatOffsets>
-		<MoveSpeed>-0.25</MoveSpeed>
-		<ShootingAccuracyPawn>-0.15</ShootingAccuracyPawn>
-		<MeleeDodgeChance>-0.10</MeleeDodgeChance>
-		<AimingDelayFactor>0.10</AimingDelayFactor>				
+		<MeleeHitChance>-0.25</MeleeHitChance>	
+		<MoveSpeed>-2</MoveSpeed>
+		<ShootingAccuracyPawn>-5</ShootingAccuracyPawn>
+		<MeleeDodgeChance>-0.8</MeleeDodgeChance>
+		<AimingDelayFactor>-0.5</AimingDelayFactor>				
 	</equippedStatOffsets>
 </ThingDef>
 

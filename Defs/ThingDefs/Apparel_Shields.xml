@@ -320,9 +320,6 @@
 		  <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
 		  <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
 		</statBases>
-		<equippedStatOffsets>
-			<MeleeHitChance>-0.1</MeleeHitChance>
-		</equippedStatOffsets>		
 		<useHitPoints>True</useHitPoints>
 		<smeltable>False</smeltable>
 		<apparel>
@@ -486,9 +483,6 @@
 		  <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
 		  <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
 		</statBases>
-		<equippedStatOffsets>
-			<MeleeHitChance>-0.1</MeleeHitChance>
-		</equippedStatOffsets>		
 		<useHitPoints>True</useHitPoints>
 		<smeltable>True</smeltable>
 		<apparel>
