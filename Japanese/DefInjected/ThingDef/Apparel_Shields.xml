@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Nguni Shield -->
+
+  <Apparel_NguniShield.label>ングニシールド</Apparel_NguniShield.label>
+  <Apparel_NguniShield.description>南アフリカのズールー民族が使用していた、革と木で作られた軽量の盾です。表面はかなり薄い構造になっていますが、単純な飛翔体を止めることができ、接近戦では特に有用です。</Apparel_NguniShield.description>
+
+
+  <!-- Wicker Shield -->
+
+  <Apparel_WickerShield.label>ウィッカーシールド</Apparel_WickerShield.label>
+  <Apparel_WickerShield.description>古代ペルシャ帝国の軍隊が使用していた、籐製の軽量の盾です。矢などの飛翔体には効果的ですが、槍や剣の突きを止められるほど頑丈ではありません。</Apparel_WickerShield.description>
+
+
+  <!-- Aspis (Greek Shield) -->
+
+  <Apparel_Aspis.label>アスピス</Apparel_Aspis.label>
+  <Apparel_Aspis.description>木製で、しばしば青銅や他の金属でできた薄い層で覆われていることが多い、凸状の盾です。</Apparel_Aspis.description>
+
+
+  <!-- Scutum (Roman Shield) -->
+
+  <Apparel_Scutum.label>スクトゥム</Apparel_Scutum.label>
+  <Apparel_Scutum.description>この古代ローマ様式の重盾は、接近戦や飛翔体から使用者を保護するために設計されています。</Apparel_Scutum.description>
+
+
+  <!-- Norse Shield -->
+
+  <Apparel_NordShield.label>ノースシールド</Apparel_NordShield.label>
+  <Apparel_NordShield.description>北欧様式の重圧な盾で、バイキングによる西ヨーロッパへの侵略と共に伝来したことで知られています。接近戦や飛翔体から使用者を保護するために設計されています。分厚い木材で造られており、縁が鉄で補強されているため、かなり頑丈です。</Apparel_NordShield.description>
+
+
+  <!-- Kite Shield -->
+
+  <Apparel_KiteShield.label>カイトシールド</Apparel_KiteShield.label>
+  <Apparel_KiteShield.description>ノルマン人御用達の、足元まで覆う大きく重い盾です。厚手の木で作られており、接近武器や飛翔体から使用者を保護するために設計されています。良好な防御力を持ちますが、両手武器の使用が制限されます。</Apparel_KiteShield.description>
+
+
+  <!-- Crusader Kite Shield -->
+
+  <Apparel_CrusaderShield.label>十字軍のカイトシールド</Apparel_CrusaderShield.label>
+  <Apparel_CrusaderShield.description>ノルマン人御用達の、足元まで覆う大きく重い盾です。十字軍の紅色のシンボルが描かれています。厚手の木で作られており、接近武器や飛翔体から使用者を保護するために設計されています。良好な防御力を持ちますが、両手武器の使用が制限されます。</Apparel_CrusaderShield.description>
+
+
+  <!-- Pavise Shield -->
+
+  <Apparel_Pavise.label>パヴィス</Apparel_Pavise.label>
+  <Apparel_Pavise.description>粗い厚板でできた、大きく重い盾です。 弓やクロスボウを扱う射手を飛翔体から保護するように設計されており、接近戦での使用は非常に困難です。</Apparel_Pavise.description>
+
+
+  <!-- Buckler Shield -->
+
+  <Apparel_BucklerShield.label>バックラー</Apparel_BucklerShield.label>
+  <Apparel_BucklerShield.description>非常に小さな金属製の盾で、通常はレイピアやそれに類似した軽量の剣と対になって使用されます。 飛翔体からの防護を得るには小さすぎる形状ですが、代わりにこの盾は近接戦において敵の武器をそらすように設計されています。</Apparel_BucklerShield.description>
+
+
+  <!-- Riot Shield -->
+
+  <Apparel_RiotShield.label>ライオットシールド</Apparel_RiotShield.label>
+  <Apparel_RiotShield.description>投擲物や近接武器から使用者を保護するよう設計された軽量の金属盾です。銃弾やその他の装甲を貫徹する武器を止めるだめの防御力は持っていません。使用者の体の大部分を保護しますが、両手武器の使用が制限されます。</Apparel_RiotShield.description>
+
+
+  <!-- Assault Shield -->
+
+  <Apparel_AssaultShield.label>アサルトシールド</Apparel_AssaultShield.label>
+  <Apparel_AssaultShield.description>一体型センサーを内蔵した、バランスを取りやすく扱いやすい高度な盾です。フルサイズのバリスティックシールドよりも小型・軽量で、使用者を銃弾から守るように設計されています。機動力を重視し、防御性よりも軽量化に重きが置かれています。</Apparel_AssaultShield.description>
+
+
+  <!-- Ballistic Shield -->
+
+  <Apparel_BallisticShield.label>バリスティックシールド</Apparel_BallisticShield.label>
+  <Apparel_BallisticShield.description>高度な合金で作られ、より大口径の攻撃にも耐えるように設計された重厚な盾です。</Apparel_BallisticShield.description>
+
+
+</LanguageData>
