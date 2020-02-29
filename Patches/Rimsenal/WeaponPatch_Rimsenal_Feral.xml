@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-<Operation Class="PatchOperationSequence">
-	<success>Always</success>
-	<operations>
-	<li Class="PatchOperationFindMod">
-	<mods>
-		<li>Rimsenal - Feral</li>
-	</mods>
-	</li>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimsenal - Feral</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
 	
 <!-- Allow certain ranged weapons to be used with shields -->
    <li Class="PatchOperationAdd">
@@ -36,6 +34,7 @@
    </li> 
    
    </operations>
+   </match>
 </Operation>
    
 </Patch>   

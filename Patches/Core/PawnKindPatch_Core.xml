@@ -3,7 +3,7 @@
 <!-- Allow some pawns to spawn with shields -->
 
 	<!-- Tribal -->
-	<!--
+
    <Operation Class="PatchOperationAdd">
    <xpath>/Defs/PawnKindDef[defName="Tribal_Warrior"]</xpath>
    <value>
@@ -21,7 +21,6 @@
 	   </apparelTags>
    </value>
    </Operation>
-	-->
    
    <!-- <Operation Class="PatchOperationAdd"> -->
    <!-- <xpath>/Defs/PawnKindDef[defName="Tribal_ChiefMelee"]</xpath> -->

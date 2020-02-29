@@ -1,0 +1,3 @@
+F:\Steam Games\steamapps\common\RimWorld\Mods\Combat Shields\Assemblies\CombatShields.dll
+F:\Steam Games\steamapps\common\RimWorld\Mods\Combat Shields\Source\MedievalShields\obj\Debug\CombatShields.csproj.CoreCompileInputs.cache
+F:\Steam Games\steamapps\common\RimWorld\Mods\Combat Shields\Source\MedievalShields\obj\Debug\CombatShields.dll

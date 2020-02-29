@@ -4,9 +4,9 @@
 <!-- Allow certain ranged weapons to be used with shields -->
    <Operation Class="PatchOperationAdd">
    <xpath>/Defs/ThingDef[defName="Gun_Revolver"]/weaponTags</xpath>
-   <value>
-	<li>Shield_Sidearm</li>
-   </value>
+	   <value>
+		<li>Shield_Sidearm</li>
+	   </value>
    </Operation>
 
    <Operation Class="PatchOperationAdd">
@@ -16,22 +16,40 @@
    </value>
    </Operation>   
  
-   <Operation Class="PatchOperationAdd">
-   <xpath>/Defs/ThingDef[defName="Gun_HeavySMG"]</xpath>
-   <value>
-	   <weaponTags>
-		<li>Shield_Sidearm</li>
-	   </weaponTags>	
-   </value>
+   <Operation Class="PatchOperationConditional">
+   <xpath>/Defs/ThingDef[defName="Gun_HeavySMG"]/weaponTags</xpath>
+	   <nomatch Class="PatchOperationAdd">
+	   <xpath>/Defs/ThingDef[defName="Gun_HeavySMG"]</xpath>
+		   <value>
+			   <weaponTags>
+				<li>Shield_Sidearm</li>
+			   </weaponTags>	
+		   </value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="Gun_HeavySMG"]/weaponTags</xpath>
+		   <value>	
+				<li>Shield_Sidearm</li>
+		   </value>	
+		</match>
    </Operation>
 
-   <Operation Class="PatchOperationAdd">
-   <xpath>/Defs/ThingDef[defName="Gun_MachinePistol"]</xpath>
-   <value>
-   <weaponTags>
-	<li>Shield_Sidearm</li>
-   </weaponTags>	
-   </value>
+   <Operation Class="PatchOperationConditional">
+   <xpath>/Defs/ThingDef[defName="Gun_MachinePistol"]/weaponTags</xpath>
+	   <nomatch Class="PatchOperationAdd">
+	   <xpath>/Defs/ThingDef[defName="Gun_MachinePistol"]</xpath>
+		   <value>
+			   <weaponTags>
+				<li>Shield_Sidearm</li>
+			   </weaponTags>	
+		   </value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="Gun_MachinePistol"]/weaponTags</xpath>
+		   <value>	
+				<li>Shield_Sidearm</li>
+		   </value>	
+		</match>
    </Operation>
 
    <Operation Class="PatchOperationAdd">

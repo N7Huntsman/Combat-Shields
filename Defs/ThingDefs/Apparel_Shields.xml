@@ -4,7 +4,6 @@
     <!-- Nguni Shield -->
 	<ThingDef ParentName="Medium_Shield">
 		<defName>Apparel_NguniShield</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
 		<label>nguni shield</label>
 		<description>A lightweight shield made of leather and wood, made famous by the Zulu. Though fairly thin, it can block simple projectiles and is useful in close-quarters-combat.</description>
 		<graphicData>
@@ -31,28 +30,27 @@
 		  <Flammability>1.0</Flammability>
 		  <DeteriorationRate>1</DeteriorationRate>
 		  <ArmorRating_Blunt>0.13</ArmorRating_Blunt>
-		  <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+		  <ArmorRating_Sharp>0.05</ArmorRating_Sharp>
 		</statBases>
 		<useHitPoints>True</useHitPoints>
-		<smeltable>False</smeltable>
 		<apparel>
 			<tags>
 				<li>Shield_Neolithic</li>
 			</tags>
-		</apparel>		
+		</apparel>
+		<smeltable>False</smeltable>		
 	</ThingDef>
 
     <!-- Wicker Shield -->	
 	<ThingDef ParentName="Large_Shield">
 		<defName>Apparel_WickerShield</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
 		<label>wicker shield</label>
-		<description>A lightweight shield made of wicker, once used by infantry of the ancient Persian empire. While effective against arrows and other projectiles, it is not sturdy enough to stop the thrust of a spear or sword.</description>
+		<description>A light shield made of wicker, similar to the kind once used by infantry of the ancient Persian empire. While effective against arrows and other projectiles, it is generally not sturdy enough to stop the thrust of a spear or sword.</description>
 		<graphicData>
 		  <texPath>Wicker_Shield</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
-		<costStuffCount>60</costStuffCount>
+		<costStuffCount>80</costStuffCount>
 		<techLevel>Neolithic</techLevel>	
 		<stuffCategories>
 		  <li>Woody</li>
@@ -72,18 +70,17 @@
 		  <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
 		</statBases>
 		<useHitPoints>True</useHitPoints>
-		<smeltable>False</smeltable>
 		<apparel>
 			<tags>
 				<li>Shield_Neolithic</li>
 			</tags>
-		</apparel>		
+		</apparel>
+		<smeltable>False</smeltable>		
 	</ThingDef>
 
     <!-- Aspis (Greek Shield) -->	
 	<ThingDef ParentName="Large_Shield">
 		<defName>Apparel_Aspis</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
 		<label>aspis</label>
 		<description>A convex shield made of wood and often covered with a thin sheet of bronze or other metal.</description>
 		<graphicData>
@@ -96,7 +93,7 @@
 		  <li>Woody</li>
 		</stuffCategories>
 		<costList>
-		  <Steel>5</Steel>
+		  <Steel>10</Steel>
 		</costList>		
 		<recipeMaker>
 	  <researchPrerequisite>Smithing</researchPrerequisite>		
@@ -115,18 +112,17 @@
 		  <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
 		</statBases>
 		<useHitPoints>True</useHitPoints>
-		<smeltable>False</smeltable>
 		<apparel>
 			<tags>
 				<li>Shield_Classical</li>
 			</tags>
-		</apparel>		
+		</apparel>
+		<smeltable>False</smeltable>		
 	</ThingDef>	
 	
     <!-- Scutum (Roman Shield) -->	
 	<ThingDef ParentName="Large_Shield">
 		<defName>Apparel_Scutum</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
 		<label>scutum</label>
 		<description>A heavy shield in Roman style designed to protect the user in hand-to-hand combat and against projectiles.</description>
 		<graphicData>
@@ -158,19 +154,18 @@
 		  <ArmorRating_Sharp>0.23</ArmorRating_Sharp>
 		</statBases>
 		<useHitPoints>True</useHitPoints>
-		<smeltable>False</smeltable>
 		<apparel>
 			<tags>
 				<li>Shield_Medieval</li>
 			</tags>
-		</apparel>		
+		</apparel>	
+		<smeltable>False</smeltable>		
 	</ThingDef>
 
 
     <!-- Norse Shield -->
 	<ThingDef ParentName="Medium_Shield">
 		<defName>Apparel_NordShield</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
 		<label>norse shield</label>
 		<description>A heavy shield in Norse style, it was famously carried by the vikings on their raids into Western Europe. Designed to protect the user in hand-to-hand combat and against projectiles. Made of thick timber with a heavy iron rim, it is quite sturdy.</description>
 		<graphicData>
@@ -178,12 +173,12 @@
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techLevel>Medieval</techLevel>	
-		<costStuffCount>80</costStuffCount>
+		<costStuffCount>60</costStuffCount>
 		<stuffCategories>
 		  <li>Woody</li>
 		</stuffCategories>	
 		<costList>
-		  <Steel>10</Steel>
+		  <Steel>20</Steel>
 		</costList>
 		<recipeMaker>
 	  <researchPrerequisite>Smithing</researchPrerequisite>		
@@ -202,18 +197,17 @@
 		  <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
 		</statBases>
 		<useHitPoints>True</useHitPoints>
-		<smeltable>False</smeltable>
 		<apparel>
 			<tags>
 				<li>Shield_Medieval</li>
 			</tags>
-		</apparel>		
+		</apparel>
+		<smeltable>False</smeltable>		
 	</ThingDef>
 
     <!-- Kite Shield -->
 	<ThingDef ParentName="Large_Shield">
 		<defName>Apparel_KiteShield</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
 		<label>kite shield</label>
 		<description>A heavy shield that covers the legs made popular by the Normans. Made of thick wood, it is designed to protect the user in hand-to-hand combat and against projectiles. It offers good protection, but restricts use of two-handed weapons.</description>
 		<graphicData>
@@ -225,6 +219,9 @@
 		<stuffCategories>
 		  <li>Woody</li>
 		</stuffCategories>
+		<costList>
+		  <Steel>30</Steel>
+		</costList>		
 		<recipeMaker>
 	  <researchPrerequisite>Smithing</researchPrerequisite>		
 		  <recipeUsers>
@@ -253,9 +250,8 @@
     <!-- Crusader Kite Shield -->
 	<ThingDef ParentName="Large_Shield">
 		<defName>Apparel_CrusaderShield</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
 		<label>crusader's kite shield</label>
-		<description>A heavy shield that covers the legs made popular by the Normans, bearing the crimson symbol of the Crusaders.. Made of thick wood, it is designed to protect the user in hand-to-hand combat and against projectiles. It offers good protection, but restricts use of two-handed weapons.</description>
+		<description>A heavy shield that covers the legs made popular by the Normans, bearing the crimson symbol of the Crusaders. Made of thick wood, it is designed to protect the user in hand-to-hand combat and against projectiles. It offers good protection, but restricts use of two-handed weapons.</description>
 		<graphicData>
 		  <texPath>Crusader_Shield</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
@@ -265,6 +261,9 @@
 		<stuffCategories>
 		  <li>Woody</li>
 		</stuffCategories>
+		<costList>
+		  <Steel>30</Steel>
+		</costList>			
 		<recipeMaker>
 	  <researchPrerequisite>Smithing</researchPrerequisite>		
 		  <recipeUsers>
@@ -282,18 +281,17 @@
 		  <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
 		</statBases>
 		<useHitPoints>True</useHitPoints>
-		<smeltable>False</smeltable>
 		<apparel>
 			<tags>
 				<li>Shield_Medieval</li>
 			</tags>
-		</apparel>		
+		</apparel>
+		<smeltable>False</smeltable>		
 	</ThingDef>
 
 	<!-- Pavise Shield -->
 	<ThingDef ParentName="Tower_Shield">
 		<defName>Apparel_Pavise</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
 		<label>pavise</label>
 		<description>A large, heavy shield made of rough-hewn planks. Designed to protect archers and crossbowmen from incoming projectiles, it is extremely cumbersome in hand-to-hand combat.</description>
 		<graphicData>
@@ -301,10 +299,13 @@
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<techLevel>Medieval</techLevel>	
-		<costStuffCount>90</costStuffCount>
+		<costStuffCount>100</costStuffCount>
 			<stuffCategories>
 			  <li>Woody</li>
 			</stuffCategories>
+		<costList>
+		  <Steel>20</Steel>
+		</costList>			
 		<recipeMaker>
 		  <researchPrerequisite>Smithing</researchPrerequisite>		
 		  <recipeUsers>
@@ -321,19 +322,18 @@
 		  <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
 		</statBases>
 		<useHitPoints>True</useHitPoints>
-		<smeltable>False</smeltable>
 		<apparel>
 			<tags>
 				<li>Shield_Medieval</li>
 				<li>Shield_Pavise</li>
 			</tags>
-		</apparel>		
+		</apparel>	
+		<smeltable>False</smeltable>		
 	</ThingDef>	
 	
     <!-- Buckler Shield -->
 	<ThingDef ParentName="Buckler_Shield">
 		<defName>Apparel_BucklerShield</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
 		<label>buckler</label>
 		<description>An extremely small metal shield, usually paired with a rapier or similiarly light sword. Too small to offer any meaningful protection from incoming projectiles, the buckler is instead designed to deflect and trap a foe's weapon in close-quarters combat.</description>
 		<graphicData>
@@ -361,7 +361,6 @@
 		  <ArmorRating_Sharp>0.20</ArmorRating_Sharp>
 		</statBases>
 		<useHitPoints>True</useHitPoints>
-		<smeltable>True</smeltable>
 		<equippedStatOffsets>
 			<MeleeHitChance>0.1</MeleeHitChance>
 		</equippedStatOffsets>
@@ -375,9 +374,8 @@
     <!-- Riot Shield -->
 	<ThingDef ParentName="Large_Shield">
 		<defName>Apparel_RiotShield</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
 		<label>riot shield</label>
-		<description>A lightweight metal shield designed to protect the user against thrown objects and melee attack, but is not thick enough to stop gunfire or other armor-piercing projectiles. It can cover most of the wearer's body but restricts use of two-handed weapons.</description>
+		<description>A lightweight metal shield designed to protect the user against thrown objects and melee attack, but not thick enough to stop gunfire or other armor-piercing projectiles. It can cover most of the wearer's body but restricts use of two-handed weapons.</description>
 		<graphicData>
 		  <texPath>Riot_Shield</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
@@ -402,7 +400,6 @@
 		  <ArmorRating_Sharp>0.21</ArmorRating_Sharp>
 		</statBases>
 		<useHitPoints>True</useHitPoints>
-		<smeltable>True</smeltable>
 		<apparel>
 			<tags>
 				<li>Shield_Industrial</li>
@@ -411,9 +408,8 @@
 	</ThingDef>
 
 	<!-- Assault Shield -->
-	<ThingDef ParentName="Medium_Shield">
+	<ThingDef ParentName="Small_Shield">
 		<defName>Apparel_AssaultShield</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
 		<label>assault shield</label>
 		<description>An advanced shield with integrated sensors to assist with balancing to make it easier to handle. Smaller and lighter than a full-sized ballistic shield, it is designed to protect the user from gunfire. Favoring speed and reduced weight over protection, it is less cumbersome than most shields.</description>
 		<graphicData>
@@ -423,6 +419,7 @@
 		<techLevel>Industrial</techLevel>	
 		<costStuffCount>65</costStuffCount>
 		<costList>
+			<Chemfuel>20</Chemfuel>			
 			<ComponentIndustrial>4</ComponentIndustrial>
 		</costList>
 			<stuffCategories>
@@ -437,7 +434,7 @@
 		<statBases>
 		  <WorkToMake>17000</WorkToMake>
 		  <Mass>7</Mass>	
-		  <MaxHitPoints>500</MaxHitPoints>
+		  <MaxHitPoints>400</MaxHitPoints>
 		  <DeteriorationRate>1</DeteriorationRate>
 		  <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
 		  <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
@@ -451,10 +448,51 @@
 		</apparel>		
 	</ThingDef>
 
+    <!-- Tactical Shield (Soft Shield) -->	
+	<ThingDef ParentName="Medium_Shield">
+		<defName>Apparel_TacShield</defName>
+		<label>tactical shield</label>
+		<description>A "soft" medium-sized ballistic shield, made from reinforced textile materials rather than metal. Though offering less ballistic protection than the assault shield, it offers wider coverage at a fraction of the weight.</description>
+		<graphicData>
+		  <texPath>Tactical_Shield</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Industrial</techLevel>	
+		<costStuffCount>70</costStuffCount>
+		<stuffCategories>
+		  <li>Leathery</li>
+		  <li>Fabric</li>
+		</stuffCategories>
+		<costList>
+		  <Chemfuel>30</Chemfuel>			
+		</costList>		
+		<recipeMaker>
+	  <researchPrerequisite>Machining</researchPrerequisite>		
+		  <recipeUsers>
+			<li>FueledSmithy</li>
+			<li>ElectricSmithy</li>		
+		  </recipeUsers>
+		</recipeMaker>
+		<statBases>
+		  <WorkToMake>17000</WorkToMake>
+		  <Mass>4.5</Mass>	
+		  <MaxHitPoints>250</MaxHitPoints>
+		  <DeteriorationRate>1.5</DeteriorationRate>
+		<StuffEffectMultiplierArmor>1.2</StuffEffectMultiplierArmor>
+		  <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.50</ArmorRating_Sharp>		
+		</statBases>			
+		<useHitPoints>True</useHitPoints>
+		<apparel>
+			<tags>
+				<li>Shield_Spacer</li>
+			</tags>
+		</apparel>
+	</ThingDef>
+
 	<!-- Ballistic Shield -->
 	<ThingDef ParentName="Tower_Shield">
 		<defName>Apparel_BallisticShield</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
 		<label>ballistic shield</label>
 		<description>A heavy shield made of advanced alloys and designed to withstand high-caliber gunfire.</description>
 		<graphicData>
@@ -464,6 +502,7 @@
 		<techLevel>Industrial</techLevel>	
 		<costStuffCount>100</costStuffCount>
 		<costList>
+			<Chemfuel>30</Chemfuel>		
 			<ComponentIndustrial>6</ComponentIndustrial>
 		</costList>
 			<stuffCategories>
@@ -491,56 +530,5 @@
 			</tags>
 		</apparel>		
 	</ThingDef>
-
-	<!-- Archo Shield -->
-<!--	<ThingDef>
-		<defName>Apparel_ArchoShield</defName>
-		<thingClass>Shield.ColorableShield</thingClass>
-		<label>Archotech hardlight shield</label>
-		<description>An advanced shield built by an archotech. Extremely lightweight and utterly impenetrable to all conventional weapons. The mechanism by which it functions is a mystery.</description>
-		<graphicData>
-		  <texPath>Archo_Shield</texPath>
-		  <graphicClass>Graphic_Single</graphicClass>
-		  <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>		  
-		</graphicData>
-		<statBases>
-		  <Mass>6</Mass>	
-		  <MaxHitPoints>10000</MaxHitPoints>
-		  <DeteriorationRate>-1</DeteriorationRate>
-		  <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
-		  <ArmorRating_Sharp>5</ArmorRating_Sharp>
-		</statBases>
-    <category>Item</category>
-    <selectable>True</selectable>
-    <pathCost>10</pathCost>
-    <useHitPoints>True</useHitPoints>
-    <drawGUIOverlay>true</drawGUIOverlay>
-	<tradeability>None</tradeability>
-    <comps>
-      <li Class="CompProperties_Forbiddable"/>	
-    </comps>	
-	<thingCategories>
-		<li>Shield</li>
-	</thingCategories>
-	<altitudeLayer>Item</altitudeLayer>
-    <alwaysHaulable>True</alwaysHaulable>
-    <tickerType>Never</tickerType>		
-	<apparel>
-		<careIfWornByCorpse>false</careIfWornByCorpse>	
-		<bodyPartGroups>
-			<li>Neck</li>
-			<li>Torso</li>
-			<li>Shoulders</li>
-			<li>Arms</li>
-			<li>LeftHand</li>
-			<li>Waist</li>
-			<li>Legs</li>
-			<li>FullHead</li>			
-		</bodyPartGroups>
-		<layers>
-		<li>Belt</li>
-		</layers>		
-	</apparel>		
-	</ThingDef>
--->	
+	
 </Defs>
