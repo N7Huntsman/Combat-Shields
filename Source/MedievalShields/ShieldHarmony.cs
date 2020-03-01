@@ -1,0 +1,272 @@
+﻿using System;
+using Verse;
+using RimWorld;
+using HarmonyLib;
+
+namespace CombatShields
+{
+    [StaticConstructorOnStartup]
+    class Harmonypatches
+    {
+        private static readonly Type shieldPatchType = typeof(Harmonypatches);
+        
+        static Harmonypatches()
+        {
+            Harmony h = new Harmony("ShieldHarmony");
+
+            h.Patch(AccessTools.Method(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.AddEquipment)),
+            postfix: new HarmonyMethod(shieldPatchType, nameof(ShieldPatchAddEquipment)));
+
+            h.Patch(AccessTools.Method(typeof(Pawn_ApparelTracker), nameof(Pawn_ApparelTracker.Wear)),
+           postfix: new HarmonyMethod(shieldPatchType, nameof(ShieldPatchWearApparel)));            
+        }
+
+        public static void ShieldPatchAddEquipment(Pawn_EquipmentTracker __instance, ThingWithComps newEq)
+        {
+            Pawn owner = __instance.pawn;
+
+            // must have picked up a weapon
+            if (PawnHasShieldEquiped(owner) || PawnHasShieldInInventory(owner))
+            {
+                if (newEq.def.IsWeapon)
+                {
+                    if (PawnHasValidEquipped(owner) && PawnHasShieldInInventory(owner))
+                    {
+                        for (int i = 0; i < owner.inventory.innerContainer.Count; i++)
+                        {
+                            foreach (ThingCategoryDef ApparelItem in owner.inventory.innerContainer[i].def.thingCategories)
+                            {
+                                if (ApparelItem.defName == "Shield")
+                                {
+                                    Thing whocares;
+                                    __instance.pawn.inventory.innerContainer.TryDrop(owner.inventory.innerContainer[i], ThingPlaceMode.Direct, out whocares, null, null);
+                                    owner.apparel.Wear(whocares as Apparel);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (PawnHasShieldEquiped(owner) && !PawnHasValidEquipped(owner))
+                        {
+                            Apparel shield = null;
+                            // do we have a shield equipped
+
+                            for(int i = 0; i < owner.inventory.innerContainer.Count; i++)
+                            {
+                                foreach (ThingCategoryDef ApparelItem in owner.inventory.innerContainer[i].def.thingCategories)
+                                {
+                                    if (ApparelItem.defName == "Shield")
+                                    {
+                                        Thing whocares;
+                                        __instance.pawn.inventory.innerContainer.TryDrop(owner.inventory.innerContainer[i], ThingPlaceMode.Direct, out whocares, null, null);
+                                    }
+                                }
+                            }
+
+                            for (int i = 0; i < owner.apparel.WornApparelCount; i++)
+                            {
+                                foreach (ThingCategoryDef ApparelItem in owner.apparel.WornApparel[i].def.thingCategories)
+                                {
+                                    if (ApparelItem.defName == "Shield")
+                                    {
+                                        shield = owner.apparel.WornApparel[i];
+                                    }
+                                }
+                            }
+                            
+                            // we have a shield equipped
+                            if (shield != null)
+                            {
+                                owner.apparel.Remove(shield);
+                                owner.inventory.innerContainer.TryAddOrTransfer(shield, false);
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        public static void ShieldPatchWearApparel(Pawn_EquipmentTracker __instance, Apparel newApparel)
+        {
+            bool shield = false;
+
+            foreach (ThingCategoryDef ApparelItem in newApparel.def.thingCategories)
+            {
+                // we have a shield in the inventory
+                if (ApparelItem.defName == "Shield")
+                {
+                    shield = true;
+                }
+            }
+
+            if (!shield)
+            {
+                return;
+            }
+
+            Pawn owner = __instance.pawn;
+
+            // must have picked up a weapon
+            if (PawnHasShieldInInventory(owner))
+            {                          
+                // do we have a shield equipped
+                
+                for (int i = 0; i < owner.inventory.innerContainer.Count; i++)
+                {
+                    foreach (ThingCategoryDef ApparelItem in owner.inventory.innerContainer[i].def.thingCategories)
+                    {
+                        if (ApparelItem.defName == "Shield")
+                        {
+                            Thing whocares;
+                            __instance.pawn.inventory.innerContainer.TryDrop(owner.inventory.innerContainer[i], ThingPlaceMode.Direct, out whocares, null, null);
+                        }
+                    }
+                }
+                Apparel wornshield = null;
+
+                for (int i = 0; i < owner.apparel.WornApparelCount; i++)
+                {
+                    foreach (ThingCategoryDef ApparelItem in owner.apparel.WornApparel[i].def.thingCategories)
+                    {
+                        if (ApparelItem.defName == "Shield")
+                        {
+                            wornshield = owner.apparel.WornApparel[i];
+                        }
+                    }
+                }
+
+                // we have a shield equipped
+                if (wornshield != null)
+                {
+                    owner.apparel.Remove(wornshield);
+                    owner.inventory.innerContainer.TryAddOrTransfer(wornshield, false);
+                }
+            }
+            else
+            {
+                if (!PawnHasValidEquipped(owner))
+                {
+                    Apparel wornshield = null;
+
+                    for (int i = 0; i < owner.apparel.WornApparelCount; i++)
+                    {
+                        foreach (ThingCategoryDef ApparelItem in owner.apparel.WornApparel[i].def.thingCategories)
+                        {
+                            if (ApparelItem.defName == "Shield")
+                            {
+                                wornshield = owner.apparel.WornApparel[i];
+                            }
+                        }
+                    }
+
+                    // we have a shield equipped
+                    if (wornshield != null)
+                    {
+                        owner.apparel.Remove(wornshield);
+                        owner.inventory.innerContainer.TryAddOrTransfer(wornshield, false);
+                    }
+                }
+            }
+        }
+
+       // check if a pawn has a shield equipped
+        public static bool PawnHasShieldEquiped(Pawn pawn)
+        {
+            bool revalue = false;
+
+            Apparel shield = null;
+            // do we have a shield equipped
+            foreach (Apparel a in pawn.apparel.WornApparel)
+            {
+                foreach (ThingCategoryDef ApparelItem in a.def.thingCategories)
+                {
+                    if (ApparelItem.defName == "Shield")
+                    {
+                        shield = a;
+                    }
+                }
+            }
+            // we have a shield equipped
+            if (shield != null)
+            {
+                revalue = true;
+            }
+
+            return revalue;
+        }
+
+        // check if a pawn has a shield in inventory
+        public static bool PawnHasShieldInInventory(Pawn pawn)
+        {
+            bool revalue = false;
+
+            foreach (Thing a in pawn.inventory.innerContainer)
+            {
+                foreach (ThingCategoryDef ApparelItem in a.def.thingCategories)
+                {
+                    // we have a shield in the inventory
+                    if (ApparelItem.defName == "Shield")
+                    {
+                        revalue = true;
+                    }
+                }
+            }
+            return revalue;
+        }
+
+        // check if the pawn picked up a shield
+        public static bool PawnPickedUpAShield(ThingWithComps newEquipment)
+        {
+            bool reValue = false;
+
+            foreach (ThingCategoryDef ApparelItem in newEquipment.def.thingCategories)
+            {
+                if (ApparelItem.defName == "Shield")
+                {
+                    reValue = true;
+                }
+            }
+            return reValue;
+        }
+        
+        // check if equiped weapon can be used with shield
+        public static bool PawnHasValidEquipped(Pawn pawn)
+        {
+            if (pawn.equipment == null)
+            {
+                // can use shield without a weapon
+                return false;
+            }
+            if (pawn.equipment.Primary == null)
+            {
+                // can use shield without a weapon
+                return true;
+            }
+            if (pawn.equipment.Primary.def.IsMeleeWeapon && !pawn.equipment.Primary.def.weaponTags.Contains("Shield_NoSidearm"))
+            {
+                // can use shield with melee weapons that aren't otherwise excluded
+                return true;
+            }
+            if (pawn.equipment.Primary == null)
+            {
+                // can use shield without a weapon
+                return true;
+            }
+            if (pawn.equipment.Primary.def.weaponTags.Contains("Shield_Sidearm"))
+            {
+                // can use shield with any weapon with appropriate tag
+                return true;
+            }
+  ///          if (pawn.equipment.Primary.def.weaponTags.Contains("LightShields_Sidearm") &&)
+  ///          {
+                // allowance for "light" shields
+  ///              return true;
+  ///          }
+            return false;
+        }
+                
+    }
+}
+
