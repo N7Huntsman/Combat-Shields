@@ -15,5 +15,8 @@
         	<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
     	</li>
 	</modDependencies>
-  <description>Adds a variety of shields to Rimworld from different cultures and eras. A special thanks to BukTaki for updating and developing the framework that helped make this mod possible.</description>
+  <description>Combat Shields adds a variety of shields to Rimworld from different cultures and eras. A special thanks to BukTaki for updating and developing the framework that helped make this mod possible.
+
+
+Note: The Steam version of Harmony should be used only when using with mod in version 1.1. The Rimworld 1.0 version has a local copy of its own.</description>
 </ModMetaData>
