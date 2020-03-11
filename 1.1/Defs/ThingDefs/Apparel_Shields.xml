@@ -530,5 +530,41 @@
 			</tags>
 		</apparel>		
 	</ThingDef>
+
+	<!-- Imperial Shield -->
+	<ThingDef ParentName="Large_Shield">
+		<defName>Apparel_ImperialShield</defName>
+		<label>carapace shield</label>
+		<description>A highly advanced shield carried into battle by the elite troops of the Empire. It offers the user not only unparalled protection, but also a number of other combat enhancements.</description>
+		<graphicData>
+		  <texPath>Royal_Shield</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>	
+		<statBases>
+		  <Mass>5</Mass>	
+		  <MaxHitPoints>800</MaxHitPoints>
+		  <DeteriorationRate>0</DeteriorationRate>
+		  <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+		  <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+		</statBases>
+		<equippedStatOffsets inherit="false">		
+			<MoveSpeed>-0.25</MoveSpeed>
+			<MeleeDodgeChance>0.1</MeleeDodgeChance>			
+			<ShootingAccuracyPawn>1</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.1</AimingDelayFactor>	
+			<PainShockThreshold>0.25</PainShockThreshold>
+			<PsychicSensitivity>-0.2</PsychicSensitivity>				
+		</equippedStatOffsets>	
+		<thingSetMakerTags>
+		  <li>RewardStandardHighFreq</li>
+		</thingSetMakerTags>		
+		<useHitPoints>True</useHitPoints>
+		<apparel>
+			<tags>
+				<li>Shield_Royalty</li>
+			</tags>
+		</apparel>		
+	</ThingDef>
 	
 </Defs>
