@@ -15,6 +15,9 @@
         	<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
     	</li>
 	</modDependencies>
+	<incompatibleWith>
+	  <li>CETeam.CombatExtended</li>
+	</incompatibleWith>	
   <description>Combat Shields adds a variety of shields to Rimworld from different cultures and eras. A special thanks to BukTaki for updating and developing the framework that helped make this mod possible.
 
 

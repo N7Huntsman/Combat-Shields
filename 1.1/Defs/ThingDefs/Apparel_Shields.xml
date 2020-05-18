@@ -467,10 +467,9 @@
 		  <Chemfuel>30</Chemfuel>			
 		</costList>		
 		<recipeMaker>
-	  <researchPrerequisite>Machining</researchPrerequisite>		
+	  	<researchPrerequisite>Machining</researchPrerequisite>		
 		  <recipeUsers>
-			<li>FueledSmithy</li>
-			<li>ElectricSmithy</li>		
+			<li>TableMachining</li>
 		  </recipeUsers>
 		</recipeMaker>
 		<statBases>
@@ -532,6 +531,7 @@
 	</ThingDef>
 
 	<!-- Imperial Shield -->
+	<!--
 	<ThingDef ParentName="Large_Shield">
 		<defName>Apparel_ImperialShield</defName>
 		<label>carapace shield</label>
@@ -566,5 +566,5 @@
 			</tags>
 		</apparel>		
 	</ThingDef>
-	
+	-->
 </Defs>

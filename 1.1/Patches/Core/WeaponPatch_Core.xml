@@ -11,9 +11,9 @@
 
    <Operation Class="PatchOperationAdd">
    <xpath>/Defs/ThingDef[defName="Gun_Autopistol"]/weaponTags</xpath>
-   <value>
-	<li>Shield_Sidearm</li>
-   </value>
+	   <value>
+		<li>Shield_Sidearm</li>
+	   </value>
    </Operation>   
  
    <Operation Class="PatchOperationConditional">
