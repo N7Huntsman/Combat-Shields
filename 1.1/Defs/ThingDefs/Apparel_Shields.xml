@@ -477,7 +477,7 @@
 		  <Mass>4.5</Mass>	
 		  <MaxHitPoints>250</MaxHitPoints>
 		  <DeteriorationRate>1.5</DeteriorationRate>
-		<StuffEffectMultiplierArmor>1.2</StuffEffectMultiplierArmor>
+		  <StuffEffectMultiplierArmor>0.75</StuffEffectMultiplierArmor>
 		  <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 		  <ArmorRating_Sharp>0.50</ArmorRating_Sharp>		
 		</statBases>			
