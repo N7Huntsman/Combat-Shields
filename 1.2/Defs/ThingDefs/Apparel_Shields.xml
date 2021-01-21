@@ -543,7 +543,7 @@
 		<techLevel>Spacer</techLevel>
 		<costStuffCount>120</costStuffCount>
 		<costList>	
-			<ComponentSpacer>6</ComponentSpacer>
+			<ComponentSpacer>1</ComponentSpacer>
 		</costList>			
 		<recipeMaker>
 		  <researchPrerequisite>Fabrication</researchPrerequisite>		
