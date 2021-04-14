@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Nguni Shield -->
+
+  <Apparel_NguniShield.label>Bouclier Nguni</Apparel_NguniShield.label>
+  <Apparel_NguniShield.description>Un bouclier léger en cuir et en bois, rendu célèbre par les Zulu. Bien qu'assez mince, il peut bloquer de simples projectiles et est utile en combat rapproché.</Apparel_NguniShield.description>
+
+
+  <!-- Wicker Shield -->
+
+  <Apparel_WickerShield.label>bouclier en osier</Apparel_WickerShield.label>
+  <Apparel_WickerShield.description>Un bouclier léger en osier, semblable à celui utilisé autrefois par l'infanterie de l'ancien empire perse. Bien qu'efficace contre les flèches et autres projectiles, il n'est généralement pas assez robuste pour arrêter la poussée d'une lance ou d'une épée</Apparel_WickerShield.description>
+
+
+  <!-- Aspis (Greek Shield) -->
+
+  <Apparel_Aspis.label>bouclier abside</Apparel_Aspis.label>
+  <Apparel_Aspis.description>Un bouclier convexe en bois et souvent recouvert d'une fine feuille de bronze ou d'un autre métal</Apparel_Aspis.description>
+
+
+  <!-- Scutum (Roman Shield) -->
+
+  <Apparel_Scutum.label>bouclier scutum</Apparel_Scutum.label>
+  <Apparel_Scutum.description>Un bouclier lourd de style romain conçu pour protéger l'utilisateur au corps à corps et contre les projectiles.</Apparel_Scutum.description>
+
+
+  <!-- Norse Shield -->
+
+  <Apparel_NordShield.label>bouclier nordique</Apparel_NordShield.label>
+  <Apparel_NordShield.description>Un bouclier lourd de style nordique, il a été porté par les vikings lors de leurs raids en Europe occidentale. Conçu pour protéger l'utilisateur au corps à corps et contre les projectiles. Fabriqué en bois épais avec une lourde jante en fer, il est assez robuste</Apparel_NordShield.description>
+
+
+  <!-- Kite Shield -->
+
+  <Apparel_KiteShield.label>bouclier cerf-volant</Apparel_KiteShield.label>
+  <Apparel_KiteShield.description>Un bouclier lourd qui couvre les jambes rendu populaire par les Normands. Fabriqué en bois épais, il est conçu pour protéger l'utilisateur au corps à corps et contre les projectiles. Il offre une bonne protection, mais limite l'utilisation des armes à deux mains</Apparel_KiteShield.description>
+
+
+  <!-- Crusader Kite Shield -->
+
+  <Apparel_CrusaderShield.label>bouclier de croisé</Apparel_CrusaderShield.label>
+  <Apparel_CrusaderShield.description>Un bouclier lourd qui couvre les jambes rendues populaires par les Normands, portant le symbole cramoisi des croisés. Fabriqué en bois épais, il est conçu pour protéger l'utilisateur au corps à corps et contre les projectiles. Il offre une bonne protection, mais limite l'utilisation des armes à deux mains.</Apparel_CrusaderShield.description>
+
+
+  <!-- Pavise Shield -->
+
+  <Apparel_Pavise.label>bouclier pavé</Apparel_Pavise.label>
+  <Apparel_Pavise.description>Un grand bouclier lourd fait de planches grossièrement taillées. Conçu pour protéger les archers et les arbalétriers des projectiles entrants, il est extrêmement encombrant en combat au corps à corps.</Apparel_Pavise.description>
+
+
+  <!-- Buckler Shield -->
+
+  <Apparel_BucklerShield.label>Bouclier buckler</Apparel_BucklerShield.label>
+  <Apparel_BucklerShield.description>Un bouclier métallique extrêmement petit, généralement associé à une rapière ou à une épée tout aussi légère. Trop petit pour offrir une protection significative contre les projectiles entrants, le bouclier est plutôt conçu pour dévier et piéger l'arme d'un ennemi en combat rapproché</Apparel_BucklerShield.description>
+
+
+  <!-- Riot Shield -->
+
+  <Apparel_RiotShield.label>bouclier anti-émeutes</Apparel_RiotShield.label>
+  <Apparel_RiotShield.description>Un bouclier métallique léger conçu pour protéger l'utilisateur contre les objets lancés et les attaques de mêlée, mais pas assez épais pour arrêter les tirs ou autres projectiles perforants. Il peut couvrir la majeure partie du corps du porteur mais restreint l'utilisation des armes à deux mains.</Apparel_RiotShield.description>
+
+
+  <!-- Assault Shield -->
+
+  <Apparel_AssaultShield.label>bouclier anti-assaut</Apparel_AssaultShield.label>
+  <Apparel_AssaultShield.description>Un bouclier avancé avec des capteurs intégrés pour aider à l'équilibrage pour le rendre plus facile à manipuler. Plus petit et plus léger qu'un bouclier balistique de taille normale, il est conçu pour protéger l'utilisateur des coups de feu. Privilégiant la vitesse et le poids réduit à la protection, il est moins encombrant que la plupart des boucliers.</Apparel_AssaultShield.description>
+
+
+  <!-- Ballistic Shield -->
+
+  <Apparel_BallisticShield.label>bouclier ballistique</Apparel_BallisticShield.label>
+  <Apparel_BallisticShield.description>Un bouclier lourd fait d'alliages avancés et conçu pour résister aux tirs de gros calibre</Apparel_BallisticShield.description>
+
+  <Apparel_TacShield.label>bouclier tactique</Apparel_TacShield.label>
+  <Apparel_TacShield.description>Un bouclier balistique léger de taille moyenne, fabriqué à partir de matériaux textiles renforcés plutôt que de métal. Bien qu'offrant moins de protection balistique que le bouclier d'assaut, il offre une couverture plus large à une fraction du poids.</Apparel_TacShield.description>
+
+  <Apparel_ImperialShield.label>bouclier impérial</Apparel_ImperialShield.label>
+  <Apparel_ImperialShield.description>Un bouclier très avancé porté au combat par les troupes d'élite et psychiques de l'Empire. Il offre à l'utilisateur non seulement une protection inégalée, mais également un certain nombre d'autres améliorations de combat.</Apparel_ImperialShield.description>
+
+</LanguageData>
