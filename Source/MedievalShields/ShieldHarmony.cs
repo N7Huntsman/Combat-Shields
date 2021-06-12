@@ -34,6 +34,10 @@ namespace CombatShields
                     {
                         for (int i = 0; i < owner.inventory.innerContainer.Count; i++)
                         {
+                            if (owner.inventory.innerContainer[i].def.thingCategories == null)
+                            {
+                                continue;
+                            }
                             foreach (ThingCategoryDef ApparelItem in owner.inventory.innerContainer[i].def.thingCategories)
                             {
                                 if (ApparelItem.defName == "Shield")
@@ -54,6 +58,10 @@ namespace CombatShields
 
                             for(int i = 0; i < owner.inventory.innerContainer.Count; i++)
                             {
+                                if (owner.inventory.innerContainer[i].def.thingCategories == null)
+                                {
+                                    continue;
+                                }
                                 foreach (ThingCategoryDef ApparelItem in owner.inventory.innerContainer[i].def.thingCategories)
                                 {
                                     if (ApparelItem.defName == "Shield")
@@ -66,6 +74,10 @@ namespace CombatShields
 
                             for (int i = 0; i < owner.apparel.WornApparelCount; i++)
                             {
+                                if (owner.apparel.WornApparel[i].def.thingCategories == null)
+                                {
+                                    continue;
+                                }
                                 foreach (ThingCategoryDef ApparelItem in owner.apparel.WornApparel[i].def.thingCategories)
                                 {
                                     if (ApparelItem.defName == "Shield")
@@ -91,6 +103,11 @@ namespace CombatShields
         public static void ShieldPatchWearApparel(Pawn_EquipmentTracker __instance, Apparel newApparel)
         {
             bool shield = false;
+            // for apparel with no thingcategory defined
+            if(newApparel.def.thingCategories == null)
+            {
+                return;
+            }
 
             foreach (ThingCategoryDef ApparelItem in newApparel.def.thingCategories)
             {
@@ -115,6 +132,10 @@ namespace CombatShields
                 
                 for (int i = 0; i < owner.inventory.innerContainer.Count; i++)
                 {
+                    if(owner.inventory.innerContainer[i].def.thingCategories == null)
+                    {
+                        continue;
+                    }
                     foreach (ThingCategoryDef ApparelItem in owner.inventory.innerContainer[i].def.thingCategories)
                     {
                         if (ApparelItem.defName == "Shield")
@@ -128,6 +149,10 @@ namespace CombatShields
 
                 for (int i = 0; i < owner.apparel.WornApparelCount; i++)
                 {
+                    if (owner.apparel.WornApparel[i].def.thingCategories == null)
+                    {
+                        continue;
+                    }
                     foreach (ThingCategoryDef ApparelItem in owner.apparel.WornApparel[i].def.thingCategories)
                     {
                         if (ApparelItem.defName == "Shield")
@@ -152,6 +177,10 @@ namespace CombatShields
 
                     for (int i = 0; i < owner.apparel.WornApparelCount; i++)
                     {
+                        if (owner.apparel.WornApparel[i].def.thingCategories == null)
+                        {
+                            continue;
+                        }
                         foreach (ThingCategoryDef ApparelItem in owner.apparel.WornApparel[i].def.thingCategories)
                         {
                             if (ApparelItem.defName == "Shield")
@@ -180,6 +209,10 @@ namespace CombatShields
             // do we have a shield equipped
             foreach (Apparel a in pawn.apparel.WornApparel)
             {
+                if (a.def.thingCategories == null)
+                {
+                    continue;
+                }
                 foreach (ThingCategoryDef ApparelItem in a.def.thingCategories)
                 {
                     if (ApparelItem.defName == "Shield")
@@ -204,6 +237,10 @@ namespace CombatShields
 
             foreach (Thing a in pawn.inventory.innerContainer)
             {
+                if (a.def.thingCategories == null)
+                {
+                    continue;
+                }
                 foreach (ThingCategoryDef ApparelItem in a.def.thingCategories)
                 {
                     // we have a shield in the inventory
@@ -221,6 +258,10 @@ namespace CombatShields
         {
             bool reValue = false;
 
+            if (newEquipment.def.thingCategories == null)
+            {
+                return false;
+            }
             foreach (ThingCategoryDef ApparelItem in newEquipment.def.thingCategories)
             {
                 if (ApparelItem.defName == "Shield")
