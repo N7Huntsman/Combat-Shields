@@ -161,8 +161,8 @@ namespace CombatShields
                 {
                     if (this.Wearer.Rotation == Rot4.South)
                     {
-                        vector.y = Altitudes.AltitudeFor(AltitudeLayer.MoteOverhead);
-                        vector.y += 1f;
+                        vector.y = Altitudes.AltitudeFor(AltitudeLayer.Pawn);
+                        vector.y += 0.033f;
                         vector.x += 0.2f;
                         vector.z -= 0.2f;
                     }
@@ -367,8 +367,8 @@ namespace CombatShields
                 {
                     if (this.Wearer.Rotation == Rot4.South)
                     {
-                        vector.y = Altitudes.AltitudeFor(AltitudeLayer.MoteOverhead);
-                        vector.y += 1f;
+                        vector.y = Altitudes.AltitudeFor(AltitudeLayer.Pawn);
+                        vector.y += 0.033f;
                         vector.x += 0.2f;
                         vector.z -= 0.2f;
                     }
