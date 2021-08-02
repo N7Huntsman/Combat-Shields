@@ -223,8 +223,11 @@ namespace CombatShields
         {
             get
             {
-
-                return this.Wearer.Drafted && !this.Wearer.Dead && !this.Wearer.InBed() && !this.Wearer.Downed && (!this.Wearer.IsPrisonerOfColony || (this.Wearer.MentalStateDef != null && this.Wearer.MentalStateDef == MentalStateDefOf.Berserk)) || this.Wearer.Faction.HostileTo(Faction.OfPlayer);
+                if (this.Wearer.Dead || this.Wearer.InBed() || this.Wearer.Downed || Wearer.IsPrisonerOfColony)
+                    return false;
+                if (this.Wearer.IsColonist && !this.Wearer.Drafted && !this.Wearer.InAggroMentalState)
+                    return false;
+                return true;
             }
         }
         public override void ExposeData()
