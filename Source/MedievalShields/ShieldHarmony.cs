@@ -197,6 +197,24 @@ namespace CombatShields
             return revalue;
         }
 
+        // check if a pawn has a shield equipped
+        public static Apparel GetPawnSheild(Pawn pawn)
+        {
+            Apparel shield = null;
+            // do we have a shield equipped
+            foreach (Apparel a in pawn.apparel.WornApparel)
+            {
+                foreach (ThingCategoryDef ApparelItem in a.def.thingCategories)
+                {
+                    if (ApparelItem.defName == "Shield")
+                    {
+                        shield = a;
+                    }
+                }
+            }
+            return shield;
+        }
+
         // check if a pawn has a shield in inventory
         public static bool PawnHasShieldInInventory(Pawn pawn)
         {
@@ -244,29 +262,19 @@ namespace CombatShields
                 // can use shield without a weapon
                 return true;
             }
-            if (pawn.equipment.Primary.def.IsMeleeWeapon && !pawn.equipment.Primary.def.weaponTags.Contains("Shield_NoSidearm"))
+            if (pawn.equipment.Primary.def.weaponTags.Any(t => t == "Shield_Sidearm"))
             {
-                // can use shield with melee weapons that aren't otherwise excluded
+                // if a weapon is a light sidearm and a shield is a light shield return true
                 return true;
             }
-            if (pawn.equipment.Primary == null)
+            if ((GetPawnSheild(pawn)?.def.apparel.tags.Contains("Light_Shield") ?? false))
             {
-                // can use shield without a weapon
-                return true;
+                // if this is a light shield only allow light sidearms
+                return pawn.equipment.Primary.def.weaponTags.Any(t => t == "LightShield_Sidearm");
             }
-            if (pawn.equipment.Primary.def.weaponTags.Contains("Shield_Sidearm"))
-            {
-                // can use shield with any weapon with appropriate tag
-                return true;
-            }
-            ///          if (pawn.equipment.Primary.def.weaponTags.Contains("LightShields_Sidearm") &&)
-            ///          {
-            // allowance for "light" shields
-            ///              return true;
-            ///          }
-            return false;
+            // by default don't allow ranged weapons or weapons with Shield_NoSidearm or "LightShield_Sidearm without a light shield"
+            return !pawn.equipment.Primary.def.IsRangedWeapon && !pawn.equipment.Primary.def.weaponTags.Any(t => t == "Shield_NoSidearm" || t == "LightShield_Sidearm");
         }
-
     }
 }
 
