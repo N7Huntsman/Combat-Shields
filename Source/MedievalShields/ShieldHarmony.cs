@@ -9,7 +9,7 @@ namespace CombatShields
     class Harmonypatches
     {
         private static readonly Type shieldPatchType = typeof(Harmonypatches);
-        
+
         static Harmonypatches()
         {
             Harmony h = new Harmony("ShieldHarmony");
@@ -18,7 +18,7 @@ namespace CombatShields
             postfix: new HarmonyMethod(shieldPatchType, nameof(ShieldPatchAddEquipment)));
 
             h.Patch(AccessTools.Method(typeof(Pawn_ApparelTracker), nameof(Pawn_ApparelTracker.Wear)),
-           postfix: new HarmonyMethod(shieldPatchType, nameof(ShieldPatchWearApparel)));            
+           postfix: new HarmonyMethod(shieldPatchType, nameof(ShieldPatchWearApparel)));
         }
 
         public static void ShieldPatchAddEquipment(Pawn_EquipmentTracker __instance, ThingWithComps newEq)
@@ -52,7 +52,7 @@ namespace CombatShields
                             Apparel shield = null;
                             // do we have a shield equipped
 
-                            for(int i = 0; i < owner.inventory.innerContainer.Count; i++)
+                            for (int i = 0; i < owner.inventory.innerContainer.Count; i++)
                             {
                                 foreach (ThingCategoryDef ApparelItem in owner.inventory.innerContainer[i].def.thingCategories)
                                 {
@@ -74,7 +74,7 @@ namespace CombatShields
                                     }
                                 }
                             }
-                            
+
                             // we have a shield equipped
                             if (shield != null)
                             {
@@ -110,9 +110,9 @@ namespace CombatShields
 
             // must have picked up a weapon
             if (PawnHasShieldInInventory(owner))
-            {                          
+            {
                 // do we have a shield equipped
-                
+
                 for (int i = 0; i < owner.inventory.innerContainer.Count; i++)
                 {
                     foreach (ThingCategoryDef ApparelItem in owner.inventory.innerContainer[i].def.thingCategories)
@@ -171,7 +171,7 @@ namespace CombatShields
             }
         }
 
-       // check if a pawn has a shield equipped
+        // check if a pawn has a shield equipped
         public static bool PawnHasShieldEquiped(Pawn pawn)
         {
             bool revalue = false;
@@ -230,7 +230,7 @@ namespace CombatShields
             }
             return reValue;
         }
-        
+
         // check if equiped weapon can be used with shield
         public static bool PawnHasValidEquipped(Pawn pawn)
         {
@@ -259,14 +259,14 @@ namespace CombatShields
                 // can use shield with any weapon with appropriate tag
                 return true;
             }
-  ///          if (pawn.equipment.Primary.def.weaponTags.Contains("LightShields_Sidearm") &&)
-  ///          {
-                // allowance for "light" shields
-  ///              return true;
-  ///          }
+            ///          if (pawn.equipment.Primary.def.weaponTags.Contains("LightShields_Sidearm") &&)
+            ///          {
+            // allowance for "light" shields
+            ///              return true;
+            ///          }
             return false;
         }
-                
+
     }
 }
 
