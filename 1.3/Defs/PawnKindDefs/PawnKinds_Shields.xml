@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
- 
+ <!--
   <PawnKindDef ParentName="TribalBase">
     <defName>Tribal_ShieldWarrior</defName>
     <label>shield warrior</label>
@@ -32,6 +32,6 @@
 	  <li>ShieldSafeMelee_Medieval_Advanced</li>	  
     </weaponTags>
   </PawnKindDef>
-
+-->
 
 </Defs>

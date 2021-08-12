@@ -58,7 +58,7 @@
    <xpath>/Defs/thingDef[defName="GD_HVSMG"]</xpath>
    <value>
 	<weaponTags>
-		<li>Shield_Sidearm</li>
+		<li>LightShield_Sidearm</li>
 	</weaponTags>		
    </value>
    </li>

@@ -34,8 +34,9 @@
 		</statBases>
 		<useHitPoints>True</useHitPoints>
 		<apparel>
-			<tags>
+			<tags inherit="false">
 				<li>Shield_Neolithic</li>
+				<li>Light_Shield</li>
 			</tags>
 		</apparel>
 		<smeltable>False</smeltable>		
@@ -365,9 +366,10 @@
 			<MeleeHitChance>0.1</MeleeHitChance>
 		</equippedStatOffsets>
 		<apparel>
-			<tags>
+			<tags inherit="false">
 				<li>Shield_Medieval</li>
-			</tags>
+				<li>Light_Shield</li>
+			</tags>		
 		</apparel>		
 	</ThingDef>	
 	
@@ -401,9 +403,10 @@
 		</statBases>
 		<useHitPoints>True</useHitPoints>
 		<apparel>
-			<tags>
+			<tags inherit="false">
 				<li>Shield_Industrial</li>
-			</tags>
+				<li>Light_Shield</li>
+			</tags>					
 		</apparel>		
 	</ThingDef>
 
@@ -442,9 +445,10 @@
 		<useHitPoints>True</useHitPoints>
 		<smeltable>True</smeltable>
 		<apparel>
-			<tags>
-				<li>Shield_Spacer</li>
-			</tags>
+			<tags inherit="false">
+				<li>Shield_Industrial</li>
+				<li>Light_Shield</li>
+			</tags>					
 		</apparel>		
 	</ThingDef>
 
@@ -483,9 +487,10 @@
 		</statBases>			
 		<useHitPoints>True</useHitPoints>
 		<apparel>
-			<tags>
-				<li>Shield_Spacer</li>
-			</tags>
+			<tags inherit="false">
+				<li>Shield_Industrial</li>
+				<li>Light_Shield</li>
+			</tags>					
 		</apparel>
 	</ThingDef>
 
@@ -574,9 +579,10 @@
 		</thingSetMakerTags>		
 		<useHitPoints>True</useHitPoints>
 		<apparel>
-			<tags>
+			<tags inherit="false">
 				<li>Shield_Royalty</li>
-			</tags>
+				<li>Light_Shield</li>
+			</tags>							
 		</apparel>		
 	</ThingDef>
 	

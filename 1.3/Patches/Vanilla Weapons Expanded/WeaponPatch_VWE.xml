@@ -26,21 +26,21 @@
    <li Class="PatchOperationAdd">
    <xpath>/Defs/ThingDef[defName="VWE_SawedOffShotgun"]/weaponTags</xpath>
    <value>
-		<li>Shield_Sidearm</li>	
+		<li>LightShield_Sidearm</li>	
    </value>
    </li>
 
    <li Class="PatchOperationAdd">
    <xpath>/Defs/ThingDef[defName="VWE_Gun_LightSMG"]/weaponTags</xpath>
    <value>
-		<li>Shield_Sidearm</li>		
+		<li>LightShield_Sidearm</li>		
    </value>
    </li>
 
    <li Class="PatchOperationAdd">
    <xpath>/Defs/ThingDef[defName="VWE_Gun_SMG"]/weaponTags</xpath>
    <value>
-		<li>Shield_Sidearm</li>	
+		<li>LightShield_Sidearm</li>	
    </value>
    </li>
 
@@ -75,7 +75,7 @@
    <li Class="PatchOperationAdd">
    <xpath>/Defs/ThingDef[defName="VWE_Gun_ChargeSMG"]/weaponTags</xpath>
    <value>
-		<li>Shield_Sidearm</li>		
+		<li>LightShield_Sidearm</li>		
    </value>
    </li>
   

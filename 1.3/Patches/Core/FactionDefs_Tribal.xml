@@ -2,6 +2,7 @@
 <Patch>
 
 <!-- Add shield-equipped pawnkinds to the tribal factions. -->
+<!--
    <Operation Class="PatchOperationReplace">
    <xpath>/Defs/FactionDef[@Name="TribeBase"]/pawnGroupMakers/li[1]/options/Tribal_Warrior</xpath>
 	<value>
@@ -41,5 +42,5 @@
 		<Tribal_ShieldWarrior>3</Tribal_ShieldWarrior>
 	</value>
    </Operation>
-
+-->
 </Patch>   

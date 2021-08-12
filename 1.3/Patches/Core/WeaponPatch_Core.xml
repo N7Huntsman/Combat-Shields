@@ -22,14 +22,14 @@
 	   <xpath>/Defs/ThingDef[defName="Gun_HeavySMG"]</xpath>
 		   <value>
 			   <weaponTags>
-				<li>Shield_Sidearm</li>
+				<li>LightShield_Sidearm</li>
 			   </weaponTags>	
 		   </value>
 		</nomatch>
 		<match Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[defName="Gun_HeavySMG"]/weaponTags</xpath>
 		   <value>	
-				<li>Shield_Sidearm</li>
+				<li>LightShield_Sidearm</li>
 		   </value>	
 		</match>
    </Operation>
@@ -64,7 +64,7 @@
    <Operation Class="PatchOperationAdd">
    <xpath>/Defs/ThingDef[defName="Pila"]/weaponTags</xpath>
    <value>
-	<li>Shield_Sidearm</li>
+		<li>Shield_Sidearm</li>
    </value>
    </Operation>  
    
