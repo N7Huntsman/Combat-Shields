@@ -1,0 +1,4 @@
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Combat-Shields\Source\MedievalShields\obj\Release\CombatShields.csproj.AssemblyReference.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Combat-Shields\Source\MedievalShields\obj\Release\CombatShields.csproj.CoreCompileInputs.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Combat-Shields\1.4\Assemblies\CombatShields.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Combat-Shields\Source\MedievalShields\obj\Release\CombatShields.dll

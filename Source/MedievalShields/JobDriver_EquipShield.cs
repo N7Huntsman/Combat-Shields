@@ -1,21 +1,14 @@
-﻿using System;
-using CombatShields;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using RimWorld;
+﻿using System.Collections.Generic;
 using Verse;
 using Verse.AI;
-using Verse.Sound;
 
 namespace CombatShields
 {
-    class JobDriver_EquipShield: JobDriver
+    internal class JobDriver_EquipShield : JobDriver
     {
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            return this.pawn.Reserve(this.job.targetA, this.job, 1, -1, null);
+            return pawn.Reserve(job.targetA, job);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()
@@ -24,17 +17,16 @@ namespace CombatShields
             {
                 
             });*/
-            yield return ShieldToInventory(this.pawn);
-
+            yield return ShieldToInventory(pawn);
         }
-        
+
         public static Toil ShieldToInventory(Pawn pawn)
         {
-            Toil toil = new Toil();
+            var toil = new Toil();
             // do we have a shield equipped
-            foreach (Apparel a in pawn.apparel.WornApparel)
+            foreach (var a in pawn.apparel.WornApparel)
             {
-                foreach (ThingCategoryDef tgd in a.def.thingCategories)
+                foreach (var tgd in a.def.thingCategories)
                 {
                     if (tgd.defName == "Shield")
                     {
@@ -42,6 +34,7 @@ namespace CombatShields
                     }
                 }
             }
+
             return toil;
         }
     }
