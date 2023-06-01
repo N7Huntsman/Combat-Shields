@@ -1,0 +1,4 @@
+# Changelog for CombatShields
+
+1.4.1 - Updated for 1.4
+

@@ -1,76 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Nguni Shield -->
-
   <Apparel_NguniShield.label>恩古尼盾</Apparel_NguniShield.label>
   <Apparel_NguniShield.description>这种轻型盾牌由皮革和木料制成，虽然相当轻薄，但能够简单的阻挡投射物，在近距离战斗中的表现也不错。恩古尼盾因它的使用者祖鲁人而闻名，在祖鲁战争期间，祖鲁武士正是依靠着这些即使从冷兵器的角度来看，也是非常简陋的武器，和英国军队进行了惨烈卓绝的正面对抗。</Apparel_NguniShield.description>
-
-
   <!-- Wicker Shield -->
-
   <Apparel_WickerShield.label>柳条盾</Apparel_WickerShield.label>
   <Apparel_WickerShield.description>由柳条编织而成的轻型盾牌，曾被古代波斯帝国步兵所使用。虽然对箭等投射物有防护效果，但其本身并不结实，无法阻挡矛或剑的刺击。</Apparel_WickerShield.description>
-
-
   <!-- Aspis (Greek Shield) -->
-
   <Apparel_Aspis.label>希腊盾</Apparel_Aspis.label>
   <Apparel_Aspis.description>斯巴达人曾经使用过这种木制盾牌，有些希腊盾的会在边缘附加铜片或者其它金属。</Apparel_Aspis.description>
-
-
   <!-- Scutum (Roman Shield) -->
-
   <Apparel_Scutum.label>塔盾</Apparel_Scutum.label>
   <Apparel_Scutum.description>古罗马风格重型盾牌，能够在面对面的近身搏斗中保护使用者的同时防护来自投射武器的伤害。</Apparel_Scutum.description>
-
-
   <!-- Norse Shield -->
-
   <Apparel_NordShield.label>维京盾</Apparel_NordShield.label>
   <Apparel_NordShield.description>维京人劫掠西欧时所使用的北欧风格重型盾牌。由包铁边的厚实的木材制成，非常坚固能够在面对面的近身搏斗中保护使用者的同时防护来自投射武器的伤害。</Apparel_NordShield.description>
-
-
   <!-- Kite Shield -->
-
   <Apparel_KiteShield.label>鸢盾</Apparel_KiteShield.label>
   <Apparel_KiteShield.description>诺曼人所钟爱的一种重型盾牌。由厚实的木材制成，在面对面的近身搏斗中保护使用者的同时防护来自投射武器的伤害。鸢盾的长度让持有者无法使用双手武器，但它为使用者的肩、躯干和腿提供了良好的防护。</Apparel_KiteShield.description>
-
-
   <!-- Crusader Kite Shield -->
-
   <Apparel_CrusaderShield.label>十字军鸢盾</Apparel_CrusaderShield.label>
   <Apparel_CrusaderShield.description>诺曼人所钟爱的一种重型盾牌的十字军盾徽版本。由厚实的木材制成，在面对面的近身搏斗中保护使用者的同时防护来自投射武器的伤害。鸢盾的长度让持有者无法使用双手武器，但它为使用者的肩、躯干和腿提供了良好的防护。</Apparel_CrusaderShield.description>
-
-
   <!-- Pavise Shield -->
-
   <Apparel_Pavise.label>巨盾</Apparel_Pavise.label>
   <Apparel_Pavise.description>热那亚巨盾弩兵曾经使用过这种巨大的木制长方形盾牌，巨盾可以手持也能直接用底部的钉子插入泥土放置在地上。（游戏中就不用想了）使用者可以惬意的蹲在巨盾后面相对安全的装填武器然后射击敌人。用于太过沉重，巨盾在肉搏战中的表现很糟糕。</Apparel_Pavise.description>
-
-
   <!-- Buckler Shield -->
-
   <Apparel_BucklerShield.label>小圆盾</Apparel_BucklerShield.label>
   <Apparel_BucklerShield.description>一种小型的金属盾牌，通常与细剑或者类似的轻型剑配合使用。因为面积过小而对投射武器没有实际的防护能力。这是一种专门为在面对面的近身搏斗提供防护的盾。</Apparel_BucklerShield.description>
-
-
   <!-- Riot Shield -->
-
   <Apparel_RiotShield.label>防爆盾</Apparel_RiotShield.label>
   <Apparel_RiotShield.description>轻型金属盾牌，设计为用于防护使用着免受投掷物和近战攻击。但不足以阻止枪械和穿甲投射物。它可以保护使用着的大部分部位，但无法使用双手武器。</Apparel_RiotShield.description>
-
-
   <!-- Assault Shield -->
-
   <Apparel_AssaultShield.label>突击盾</Apparel_AssaultShield.label>
   <Apparel_AssaultShield.description>拥有集成传感器的先进盾牌，有助于维持使用者的平衡，使其更易于使用。它比全尺寸防弹盾牌更小也更轻，同时也比大多数盾牌更便于携带。</Apparel_AssaultShield.description>
-
-
   <!-- Ballistic Shield -->
-
   <Apparel_BallisticShield.label>防弹盾牌</Apparel_BallisticShield.label>
   <Apparel_BallisticShield.description>由高级合金制成的重型盾牌，用于抵御大口径武器。</Apparel_BallisticShield.description>
-
-
 </LanguageData>

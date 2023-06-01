@@ -1,28 +1,133 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Combat Shields</name>
-  <author>N7Huntsman </author>
-	<supportedVersions>
-		<li>1.0</li>
-		<li>1.1</li>
-		<li>1.2</li>
-		<li>1.3</li>		
-		<li>1.4</li>		
-	</supportedVersions>
-	<packageId>n7huntsman.combatshields</packageId>
-	<modDependencies>
-    	<li>
-        	<packageId>brrainz.harmony</packageId>
-        	<displayName>Harmony</displayName>
-        	<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
-        	<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
-    	</li>
-	</modDependencies>
-	<incompatibleWith>
-	  <li>CETeam.CombatExtended</li>
-	</incompatibleWith>	
-  <description>Combat Shields adds a variety of shields to Rimworld from different cultures and eras. A special thanks to BukTaki for updating and developing the framework that helped make this mod possible.
+  <name>Combat Shields (Continued)</name>
+  <packageId>Mlie.CombatShields</packageId>
+  <author>N7Huntsman</author>
+  <url>https://github.com/emipa606/CombatShields</url>
+  <supportedVersions>
+    <li>1.0</li>
+    <li>1.1</li>
+    <li>1.2</li>
+    <li>1.3</li>
+    <li>1.4</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <incompatibleWith>
+    <li>CETeam.CombatExtended</li>
+  </incompatibleWith>
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+Update of N7Huntsmans mod https://steamcommunity.com/sharedfiles/filedetails/?id=1588616696
+with permission
 
+[img]https://i.imgur.com/pufA0kM.png[/img]
 
-Note: The Steam version of Harmony should be used only when using with mod in version 1.1. The Rimworld 1.0 version has a local copy of its own.</description>
+[table]
+    [tr][td][url=https://dsc.gg/mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td] [td][url=https://github.com/emipa606/CombatShields][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
+[img]https://i.imgur.com/wUP2ztj.png[/img]
+Additional types of shields from a variety of eras, usable with melee and certain ranged weapons. Designed by different cultures for different roles, they allow further specialization of colonists equipped with shields depending upon their role in combat and duty around the colony. Feel free to leave suggestions for more shields in the comments below.
+
+This mod is also available on [url=https://github.com/N7Huntsman/Combat-Shields]Github.[/url]
+
+[img]https://i.imgur.com/2R1HE6B.png[/img]
+[h1]Nguni Shield:[/h1]
+[img]https://i.imgur.com/Dz4Dp6a.png[/img]
+Recipe: 15 x Wood, 45 x Leather
+Description: A design originating amongst the Nguni people of South Africa, this lightweight shield--traditionally made from cowhide--was most famously used by the Zulu. Designed with offensive purposes in mind, it is not thick enough to protect the user against sustained fire, but in skilled hands is extremely effective in hand-to-hand combat.
+
+[h1]Wicker Shield:[/h1]
+[img]https://i.imgur.com/gXUlgBA.png[/img]
+Recipe: 60 x Wood
+Description: Carried by the [i]Sparabara[/i] of the armies of Ancient Persia, the shields are made of wickerwork, offering reasonably good coverage from most simple projectiles without weighing the user down. Unfortunately, their lightweight construction means they offer less protection against the thrust of a spear or sword in hand-to-hand combat.
+
+[h1]Aspis:[/h1]
+[img]https://i.imgur.com/jeSCSzC.png[/img]
+Recipe: 60 x Wood, 5 x Steel
+Description: A convex shield made of wood and often covered with a thin sheet of bronze or other metal, the Asis was the shield of the Greek hoplite, and its good coverage was an integral part of the success of phalanx. This shield bears the letter 'lambda,' mark of the city-state of Sparta.
+
+[h1]Scutum:[/h1]
+[img]https://i.imgur.com/LVyZXLi.png[/img]
+Recipe: 60 x Wood, 10 x Steel
+Description: Famously carried by Roman legionaries, its design reflected its role as a heavy infantryman's shield. Made of layers of wood glued together and covered with canvas or leather, it offered a good compromise between weight and protection. A later design, thick planks and a metal edging give the shield additional strength.
+
+[h1]Norse Shield:[/h1]
+[img]https://i.imgur.com/0DlHcTA.png[/img]
+Recipe: 70 x Wood, 10 x Steel
+Description: A heavy shield in Norse style, it was famously carried by the vikings on their raids into Western Europe. Designed to protect the user in hand-to-hand combat and against projectiles. Made of thick timber with a heavy iron rim, it is quite sturdy.
+
+[h1]Kite Shield:[/h1]
+[img]https://i.imgur.com/njdjIy7.png[/img][img]https://i.imgur.com/TjPtEIR.png[/img]
+Recipe: 70 x Wood
+Description: A cavalryman's shield, the kite shield originated in Western Europe, becoming widespread around the 10th Century AD. While one of the few designs of the time that offered good protection the users legs, its length made it awkward for infantry to use. Nevertheless, it was extremely popular, seeing extensive use throughout Europe, and evenutally being introduced to the Holy Land by Norman Crusaders.
+
+[h1]Pavise Shield:[/h1]
+[img]https://i.imgur.com/HSO7kjJ.png[/img]
+Recipe: 90 x Wood
+Description: A large, heavy shield made of rough-hewn planks. Designed to protect archers and crossbowmen from incoming projectiles, it is extremely cumbersome in hand-to-hand combat. They were particularly common place in Western Europe during the 14th and 15th centuries.
+
+[h1]Buckler:[/h1]
+[img]https://i.imgur.com/m3ujSQK.png[/img]
+Recipe: 40 x Steel
+Description: An extremely small metal shield, usually paired with a rapier or similiarly light sword. Too small to offer any meaningful protection from incoming projectiles, the buckler is instead designed to deflect and trap a foe's weapon in close-quarters combat.
+
+[h1]Riot Shield:[/h1]
+[img]https://i.imgur.com/U8QHqMb.png[/img]
+Recipe: 60 x Steel
+Description: Designed for law enforcement and corrections officers, this shield's lightweight metal construction and large size make it ideal for use against crowds and unarmed opponents. However, it offers only limited protection against projectiles and isn't thick enough to stop even the lowest caliber gunfire.
+
+[h1]Assault Shield:[/h1]
+[img]https://i.imgur.com/IXnl9kT.png[/img]
+Recipe: 60 x Steel, 4 x Components
+Description: An advanced composite shield with a suite of integrated sensors, the assault shield was designed for military units likely to find themselves engaged in extremely close-quarters combat. Far smaller than a full-sized ballistic shield, it trades coverage for mobility. Though capable of stopping handgun and rifle rounds, its small size leaves the user very little to hide behind should they find themselves under sustained fire.
+
+[h1]Tactical Shield:[/h1]
+[img]https://i.imgur.com/Ewyk1OU.png[/img]
+Recipe: 70 x Textile, 30 x Chemfuel
+Description: A "soft" medium-sized ballistic shield, made from reinforced textile materials rather than metal. Though offering less ballistic protection than the assault shield, it offers wider coverage at a fraction of the weight.
+
+[h1]Ballistic Shield:[/h1]
+[img]https://i.imgur.com/9Ed87VC.png[/img]
+Recipe: 90 x Steel
+Description: A heavy shield made of advanced alloys and designed to withstand high-caliber gunfire. Capable of stopping rifle rounds, its size and weight makes it extremely cumbersome.
+
+[h1]Carapace Shield:[/h1]
+[img]https://i.imgur.com/KgGRDiQ.png[/img]
+Recipe: 120 x Steel, 1 x Advanced Component
+Description: A highly advanced shield carried into battle by the elite, psychic troops of the Empire. It offers the user not only unparalled protection, but also a number of other combat enhancements.
+
+[img]https://i.imgur.com/XIoZNaj.png[/img]
+[h1]Modded Weapons[/h1]
+There should be no conflicts with melee weapons added by mods. For ranged weapons, the weapon must have the 'Shield_Sidearm' weapon tag to be usable with a shield. If you have suggestions for a weapon mod to be patched, or need help creating a patch, use the comments.
+[h1]Save Games[/h1]
+It should not be necessary to start a new save game, but may cause errors if removed from an existing save. 
+[h1]Supported Mods[/h1]
+[list]
+[*]Simple Sidearms 
+
+[img]https://i.imgur.com/PwoNOj4.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]</description>
 </ModMetaData>
