@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Rimfire 2.5</li>
-    </mods>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="RF_Gun_ChargePistol"]</xpath>
+    <success>Always</success>
     <match Class="PatchOperationSequence">
       <success>Always</success>
       <operations>

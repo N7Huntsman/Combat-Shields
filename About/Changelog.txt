@@ -1,4 +1,7 @@
 # Changelog for CombatShields
 
+1.4.2 - Changed to conditional patches
+
+
 1.4.1 - Updated for 1.4
 

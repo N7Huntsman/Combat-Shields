@@ -14,8 +14,6 @@ with permission
 
 Additional types of shields from a variety of eras, usable with melee and certain ranged weapons. Designed by different cultures for different roles, they allow further specialization of colonists equipped with shields depending upon their role in combat and duty around the colony. Feel free to leave suggestions for more shields in the comments below.
 
-This mod is also available on https://github.com/N7Huntsman/Combat-Shields]Github.
-
 ![Image](https://i.imgur.com/2R1HE6B.png)
 
 # Nguni Shield:
@@ -114,15 +112,27 @@ Description: A highly advanced shield carried into battle by the elite, psychic 
 
 # Modded Weapons
 
-There should be no conflicts with melee weapons added by mods. For ranged weapons, the weapon must have the 'Shield_Sidearm' weapon tag to be usable with a shield. If you have suggestions for a weapon mod to be patched, or need help creating a patch, use the comments.
-# Save Games
-
-It should not be necessary to start a new save game, but may cause errors if removed from an existing save. 
+There should be no conflicts with melee weapons added by mods. For ranged weapons, the weapon must have the 'Shield_Sidearm' weapon tag to be usable with a shield.
 # Supported Mods
 
 
 
 - Simple Sidearms 
+- Rimsenal
+- Weapon Tech
+- Arrow Please
+- Medieval Times
+- Rimfire
+
+
+
+A very special thanks to:
+BukTaki, whose permission and shield framework made this mod possible.
+Dango998, for their Simplified Chinese translation.
+SET_SET, for thier Japanese translation.
+Rostropovich, for their patches for Arrow Please and Weapon Tech.
+XeoNovaDan, for their patch for Rimfire.
+All the folks on the Rimworld discord for their endless patience and help.
 
 ![Image](https://i.imgur.com/PwoNOj4.png)
 
@@ -136,3 +146,4 @@ It should not be necessary to start a new save game, but may cause errors if rem
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2983650634]Last updated 2023-06-01

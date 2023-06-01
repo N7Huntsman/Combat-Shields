@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Weapons Expanded - Frontier</li>
-    </mods>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="VWEFT_Gun_HeavyRevolver"]</xpath>
+    <success>Always</success>
     <match Class="PatchOperationSequence">
       <operations>
         <!-- Allow certain ranged weapons to be used with shields -->
