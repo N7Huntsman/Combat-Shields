@@ -5,173 +5,157 @@ using UnityEngine;
 using Verse;
 using Random = System.Random;
 
-namespace CombatShields
+namespace CombatShields;
+
+public class Apparel_Shield : Apparel
 {
-    public class Apparel_Shield : Apparel
+    public static readonly SoundDef SoundAbsorbDamage = SoundDef.Named("PersonalShieldAbsorbDamage");
+    public static readonly SoundDef SoundBreak = SoundDef.Named("PersonalShieldBroken");
+
+    public bool colorable;
+    public Vector3 impactAngleVect;
+    public Material shieldMat;
+
+    public bool ShouldDisplay
     {
-        public static readonly SoundDef SoundAbsorbDamage = SoundDef.Named("PersonalShieldAbsorbDamage");
-        public static readonly SoundDef SoundBreak = SoundDef.Named("PersonalShieldBroken");
-
-        public bool colorable;
-        public Vector3 impactAngleVect;
-        public Material shieldMat;
-
-        public bool ShouldDisplay
+        get
         {
-            get
-            {
-                if (Wearer.Dead || Wearer.InBed() || Wearer.Downed || Wearer.IsPrisonerOfColony)
-                {
-                    return false;
-                }
-
-                if (Wearer.IsColonist && !Wearer.Drafted && !Wearer.InAggroMentalState)
-                {
-                    return false;
-                }
-
-                return true;
-            }
-        }
-
-
-        public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
-        {
-            if (dinfo.Instigator == null)
+            if (Wearer.Dead || Wearer.InBed() || Wearer.Downed || Wearer.IsPrisonerOfColony)
             {
                 return false;
             }
 
-            var melee = Wearer.skills.GetSkill(SkillDefOf.Melee);
-            var random = new Random();
-            var chance = random.Next(0, 21);
-            // this.AbsorbedDamage(dinfo);
-
-            // full hit
-
-            // partial hit
-
-            // partial block
-
-            // full block
+            return !Wearer.IsColonist || Wearer.Drafted || Wearer.InAggroMentalState;
+        }
+    }
 
 
-            if (chance >= melee.levelInt)
-            {
-                var i = (int)dinfo.Amount;
-                i /= 4;
-
-                HitPoints -= i;
-            }
-            else
-            {
-                var i = (int)dinfo.Amount;
-                i /= 10;
-
-                HitPoints -= i;
-            }
-
+    public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
+    {
+        if (dinfo.Instigator == null)
+        {
             return false;
         }
 
-        [DebuggerHidden]
-        public override IEnumerable<Gizmo> GetWornGizmos()
+        var melee = Wearer.skills.GetSkill(SkillDefOf.Melee);
+        var random = new Random();
+        var chance = random.Next(0, 21);
+
+        if (chance >= melee.levelInt)
         {
-            yield return new Gizmo_ShieldStatus
-            {
-                shield = this
-            };
+            var i = (int)dinfo.Amount;
+            i /= 4;
+
+            HitPoints -= i;
+        }
+        else
+        {
+            var i = (int)dinfo.Amount;
+            i /= 10;
+
+            HitPoints -= i;
         }
 
-        public override void DrawWornExtras()
+        return false;
+    }
+
+    [DebuggerHidden]
+    public override IEnumerable<Gizmo> GetWornGizmos()
+    {
+        yield return new Gizmo_ShieldStatus
         {
-            // base.DrawWornExtras();
+            shield = this
+        };
+    }
 
-            if (!ShouldDisplay)
-            {
-                return;
-            }
-            // base.DrawWornExtras();
+    public override void DrawWornExtras()
+    {
+        // base.DrawWornExtras();
 
-            var num = 0f;
-            var vector = Wearer.Drawer.DrawPos;
-            vector.y = AltitudeLayer.Pawn.AltitudeFor();
-            var s = new Vector3(1f, 1f, 1f);
-            if (Wearer.Rotation == Rot4.North)
-            {
-                vector.y = AltitudeLayer.Item.AltitudeFor();
-                vector.x -= 0.2f;
-                vector.z -= 0.2f;
-            }
-            else if (Wearer.Rotation == Rot4.South)
-            {
-                vector.y += 0.033f;
-                vector.x += 0.2f;
-                vector.z -= 0.2f;
-            }
-            else if (Wearer.Rotation == Rot4.East)
-            {
-                vector.z -= 0.2f;
-                num = 90f;
-            }
-            else if (Wearer.Rotation == Rot4.West)
-            {
-                vector.y = AltitudeLayer.MoteOverhead.AltitudeFor();
-                vector.z -= 0.2f;
-                num = 270f;
-            }
+        if (!ShouldDisplay)
+        {
+            return;
+        }
+        // base.DrawWornExtras();
 
-            if (shieldMat == null)
-            {
-                shieldMat = MaterialPool.MatFrom(def.graphicData.texPath);
-            }
-
-            var matrix = default(Matrix4x4);
-            matrix.SetTRS(vector, Quaternion.AngleAxis(num, Vector3.up), s);
-            Graphics.DrawMesh(MeshPool.plane10, matrix, shieldMat, 0);
+        var num = 0f;
+        var vector = Wearer.Drawer.DrawPos;
+        vector.y = AltitudeLayer.Pawn.AltitudeFor();
+        var s = new Vector3(1f, 1f, 1f);
+        if (Wearer.Rotation == Rot4.North)
+        {
+            vector.y = AltitudeLayer.Item.AltitudeFor();
+            vector.x -= 0.2f;
+            vector.z -= 0.2f;
+        }
+        else if (Wearer.Rotation == Rot4.South)
+        {
+            vector.y += 0.033f;
+            vector.x += 0.2f;
+            vector.z -= 0.2f;
+        }
+        else if (Wearer.Rotation == Rot4.East)
+        {
+            vector.z -= 0.2f;
+            num = 90f;
+        }
+        else if (Wearer.Rotation == Rot4.West)
+        {
+            vector.y = AltitudeLayer.MoteOverhead.AltitudeFor();
+            vector.z -= 0.2f;
+            num = 270f;
         }
 
-        [StaticConstructorOnStartup]
-        internal class Gizmo_ShieldStatus : Gizmo
+        if (shieldMat == null)
         {
-            private static readonly Texture2D FullTex =
-                SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.2f, 0.24f));
+            shieldMat = MaterialPool.MatFrom(def.graphicData.texPath);
+        }
 
-            private static readonly Texture2D EmptyTex = SolidColorMaterials.NewSolidColorTexture(Color.clear);
-            public Apparel_Shield shield;
+        var matrix = default(Matrix4x4);
+        matrix.SetTRS(vector, Quaternion.AngleAxis(num, Vector3.up), s);
+        Graphics.DrawMesh(MeshPool.plane10, matrix, shieldMat, 0);
+    }
 
-            public override float GetWidth(float maxWidth)
-            {
-                return 140f;
-            }
+    [StaticConstructorOnStartup]
+    internal class Gizmo_ShieldStatus : Gizmo
+    {
+        private static readonly Texture2D FullTex =
+            SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.2f, 0.24f));
 
-            public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
-            {
-                var rect = new Rect(topLeft.x, topLeft.y, GetWidth(140f), 75f);
-                Widgets.DrawWindowBackground(rect);
+        private static readonly Texture2D EmptyTex = SolidColorMaterials.NewSolidColorTexture(Color.clear);
+        public Apparel_Shield shield;
 
-                var rect2 = rect.ContractedBy(6f);
-                var rect3 = rect2;
+        public override float GetWidth(float maxWidth)
+        {
+            return 140f;
+        }
 
-                rect3.height = rect.height / 2f;
+        public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
+        {
+            var rect = new Rect(topLeft.x, topLeft.y, GetWidth(140f), 75f);
+            Widgets.DrawWindowBackground(rect);
 
-                Text.Font = GameFont.Tiny;
-                Widgets.Label(rect3, shield.LabelCap);
+            var rect2 = rect.ContractedBy(6f);
+            var rect3 = rect2;
 
-                var rect4 = rect2;
+            rect3.height = rect.height / 2f;
 
-                rect4.yMin = rect.y + (rect.height / 2f);
-                float num = shield.MaxHitPoints / shield.HitPoints;
+            Text.Font = GameFont.Tiny;
+            Widgets.Label(rect3, shield.LabelCap);
 
-                Widgets.FillableBar(rect4, num, FullTex, EmptyTex, false);
-                Text.Font = GameFont.Small;
-                Text.Anchor = TextAnchor.MiddleCenter;
+            var rect4 = rect2;
 
-                Widgets.Label(rect4, shield.HitPoints + " / " + shield.MaxHitPoints);
-                Text.Anchor = TextAnchor.UpperLeft;
+            rect4.yMin = rect.y + (rect.height / 2f);
+            var num = (float)shield.HitPoints / shield.MaxHitPoints;
 
-                return new GizmoResult(0);
-            }
+            Widgets.FillableBar(rect4, num, FullTex, EmptyTex, false);
+            Text.Font = GameFont.Small;
+            Text.Anchor = TextAnchor.MiddleCenter;
+
+            Widgets.Label(rect4, $"{shield.HitPoints} / {shield.MaxHitPoints}");
+            Text.Anchor = TextAnchor.UpperLeft;
+
+            return new GizmoResult(0);
         }
     }
 }
