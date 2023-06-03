@@ -79,4 +79,9 @@
   <Apparel_TacShield.description>一种中型的软质防弹盾牌，由强化织物而非金属制成。虽然提供的防弹保护不如突击盾，但它以较小的重量提供更广泛的覆盖范围。</Apparel_TacShield.description>
 
 
+  <!-- Imperial Shield -->
+  <Apparel_ImperialShield>甲壳盾牌</Apparel_ImperialShield.label>
+  <Apparel_ImperialShield.description>高度先进的盾牌，由帝国的精锐灵能部队携带。它不仅为用户提供了无与伦比的保护，而且还提供了许多其他战斗增强功能。</Apparel_ImperialShield.description>
+  
+  
 </LanguageData>
