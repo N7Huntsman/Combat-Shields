@@ -1,5 +1,10 @@
 # Changelog for CombatShields
 
+1.4.3 - Added settings for ranged weapons
+Now checks for shields thingclass as well as category to support mods that changes categories for things.
+Used DeepL to update translations for ChineseSimplified, French, German, Japanese
+
+
 1.4.2 - Changed to conditional patches
 
 

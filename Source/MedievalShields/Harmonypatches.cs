@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -10,15 +12,108 @@ internal class Harmonypatches
 {
     private static readonly Type shieldPatchType = typeof(Harmonypatches);
 
+    public static readonly List<ThingDef> AllRangedWeapons;
+    public static readonly List<ThingDef> AllBaseShieldableWeapons;
+    public static readonly List<ThingDef> AllBaseLightShieldableWeapons;
+    public static readonly List<ThingDef> AllShields;
+    public static readonly List<ThingDef> AllLightShields;
+
+
     static Harmonypatches()
     {
         var h = new Harmony("ShieldHarmony");
-
         h.Patch(AccessTools.Method(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.AddEquipment)),
             postfix: new HarmonyMethod(shieldPatchType, nameof(ShieldPatchAddEquipment)));
-
         h.Patch(AccessTools.Method(typeof(Pawn_ApparelTracker), nameof(Pawn_ApparelTracker.Wear)),
             postfix: new HarmonyMethod(shieldPatchType, nameof(ShieldPatchWearApparel)));
+
+        AllRangedWeapons = DefDatabase<ThingDef>.AllDefsListForReading
+            .Where(def => def.IsRangedWeapon && !def.destroyOnDrop).OrderBy(def => def.label).ToList();
+        AllBaseShieldableWeapons =
+            AllRangedWeapons.Where(def => def.weaponTags?.Contains("Shield_Sidearm") == true).ToList();
+        AllBaseLightShieldableWeapons = AllRangedWeapons
+            .Where(def => def.weaponTags?.Contains("LightShield_Sidearm") == true).ToList();
+        AllShields = DefDatabase<ThingDef>.AllDefsListForReading.Where(IsShield).OrderBy(def => def.label).ToList();
+        AllLightShields = AllShields.Where(def => def.apparel?.tags.Contains("Light_Shield") == true)
+            .OrderBy(def => def.label).ToList();
+
+        if (CombatShieldsMod.instance.Settings.ShieldUse?.Any() == true)
+        {
+            foreach (var shieldUseKey in CombatShieldsMod.instance.Settings.ShieldUse.Keys)
+            {
+                var weapon = DefDatabase<ThingDef>.GetNamedSilentFail(shieldUseKey);
+                if (weapon == null)
+                {
+                    continue;
+                }
+
+                if (CombatShieldsMod.instance.Settings.ShieldUse[shieldUseKey])
+                {
+                    if (weapon.weaponTags == null)
+                    {
+                        weapon.weaponTags = new List<string>();
+                    }
+
+                    if (weapon.weaponTags.Contains("Shield_Sidearm"))
+                    {
+                        continue;
+                    }
+
+                    weapon.weaponTags.Add("Shield_Sidearm");
+                    if (weapon.weaponTags.Contains("LightShield_Sidearm"))
+                    {
+                        weapon.weaponTags.Remove("LightShield_Sidearm");
+                    }
+
+                    continue;
+                }
+
+                if (weapon.weaponTags?.Contains("Shield_Sidearm") == true)
+                {
+                    weapon.weaponTags.Remove("Shield_Sidearm");
+                }
+            }
+        }
+
+        if (CombatShieldsMod.instance.Settings.LightShieldUse?.Any() != true)
+        {
+            return;
+        }
+
+        foreach (var shieldUseKey in CombatShieldsMod.instance.Settings.LightShieldUse.Keys)
+        {
+            var weapon = DefDatabase<ThingDef>.GetNamedSilentFail(shieldUseKey);
+            if (weapon == null)
+            {
+                continue;
+            }
+
+            if (CombatShieldsMod.instance.Settings.LightShieldUse[shieldUseKey])
+            {
+                if (weapon.weaponTags == null)
+                {
+                    weapon.weaponTags = new List<string>();
+                }
+
+                if (weapon.weaponTags.Contains("LightShield_Sidearm"))
+                {
+                    continue;
+                }
+
+                weapon.weaponTags.Add("LightShield_Sidearm");
+                if (weapon.weaponTags.Contains("Shield_Sidearm"))
+                {
+                    weapon.weaponTags.Remove("Shield_Sidearm");
+                }
+
+                continue;
+            }
+
+            if (weapon.weaponTags?.Contains("LightShield_Sidearm") == true)
+            {
+                weapon.weaponTags.Remove("LightShield_Sidearm");
+            }
+        }
     }
 
     public static void ShieldPatchAddEquipment(Pawn_EquipmentTracker __instance, ThingWithComps newEq)
@@ -40,22 +135,14 @@ internal class Harmonypatches
         {
             for (var i = 0; i < owner.inventory.innerContainer.Count; i++)
             {
-                if (owner.inventory.innerContainer[i].def.thingCategories == null)
+                if (!IsShield(owner.inventory.innerContainer[i].def))
                 {
                     continue;
                 }
 
-                foreach (var ApparelItem in owner.inventory.innerContainer[i].def.thingCategories)
-                {
-                    if (ApparelItem.defName != "Shield")
-                    {
-                        continue;
-                    }
-
-                    __instance.pawn.inventory.innerContainer.TryDrop(owner.inventory.innerContainer[i],
-                        ThingPlaceMode.Direct, out var whocares);
-                    owner.apparel.Wear(whocares as Apparel);
-                }
+                __instance.pawn.inventory.innerContainer.TryDrop(owner.inventory.innerContainer[i],
+                    ThingPlaceMode.Direct, out var whocares);
+                owner.apparel.Wear(whocares as Apparel);
             }
         }
         else
@@ -70,37 +157,24 @@ internal class Harmonypatches
 
             for (var i = 0; i < owner.inventory.innerContainer.Count; i++)
             {
-                if (owner.inventory.innerContainer[i].def.thingCategories == null)
+                if (!IsShield(owner.inventory.innerContainer[i].def))
                 {
                     continue;
                 }
 
-                foreach (var ApparelItem in owner.inventory.innerContainer[i].def.thingCategories)
-                {
-                    if (ApparelItem.defName != "Shield")
-                    {
-                        continue;
-                    }
-
-                    __instance.pawn.inventory.innerContainer.TryDrop(
-                        owner.inventory.innerContainer[i], ThingPlaceMode.Direct, out _);
-                }
+                __instance.pawn.inventory.innerContainer.TryDrop(
+                    owner.inventory.innerContainer[i], ThingPlaceMode.Direct, out _);
             }
 
             for (var i = 0; i < owner.apparel.WornApparelCount; i++)
             {
-                if (owner.apparel.WornApparel[i].def.thingCategories == null)
+                if (!IsShield(owner.apparel.WornApparel[i].def))
                 {
                     continue;
                 }
 
-                foreach (var ApparelItem in owner.apparel.WornApparel[i].def.thingCategories)
-                {
-                    if (ApparelItem.defName == "Shield")
-                    {
-                        shield = owner.apparel.WornApparel[i];
-                    }
-                }
+                shield = owner.apparel.WornApparel[i];
+                break;
             }
 
             // we have a shield equipped
@@ -116,23 +190,7 @@ internal class Harmonypatches
 
     public static void ShieldPatchWearApparel(Pawn_EquipmentTracker __instance, Apparel newApparel)
     {
-        var shield = false;
-        // for apparel with no thingcategory defined
-        if (newApparel.def.thingCategories == null)
-        {
-            return;
-        }
-
-        foreach (var ApparelItem in newApparel.def.thingCategories)
-        {
-            // we have a shield in the inventory
-            if (ApparelItem.defName == "Shield")
-            {
-                shield = true;
-            }
-        }
-
-        if (!shield)
+        if (!IsShield(newApparel.def))
         {
             return;
         }
@@ -146,39 +204,25 @@ internal class Harmonypatches
 
             for (var i = 0; i < owner.inventory.innerContainer.Count; i++)
             {
-                if (owner.inventory.innerContainer[i].def.thingCategories == null)
+                if (!IsShield(owner.inventory.innerContainer[i].def))
                 {
                     continue;
                 }
 
-                foreach (var ApparelItem in owner.inventory.innerContainer[i].def.thingCategories)
-                {
-                    if (ApparelItem.defName != "Shield")
-                    {
-                        continue;
-                    }
-
-                    __instance.pawn.inventory.innerContainer.TryDrop(owner.inventory.innerContainer[i],
-                        ThingPlaceMode.Direct, out _);
-                }
+                __instance.pawn.inventory.innerContainer.TryDrop(owner.inventory.innerContainer[i],
+                    ThingPlaceMode.Direct, out _);
             }
 
             Apparel wornshield = null;
 
             for (var i = 0; i < owner.apparel.WornApparelCount; i++)
             {
-                if (owner.apparel.WornApparel[i].def.thingCategories == null)
+                if (!IsShield(owner.apparel.WornApparel[i].def))
                 {
                     continue;
                 }
 
-                foreach (var ApparelItem in owner.apparel.WornApparel[i].def.thingCategories)
-                {
-                    if (ApparelItem.defName == "Shield")
-                    {
-                        wornshield = owner.apparel.WornApparel[i];
-                    }
-                }
+                wornshield = owner.apparel.WornApparel[i];
             }
 
             // we have a shield equipped
@@ -201,18 +245,12 @@ internal class Harmonypatches
 
             for (var i = 0; i < owner.apparel.WornApparelCount; i++)
             {
-                if (owner.apparel.WornApparel[i].def.thingCategories == null)
+                if (!IsShield(owner.apparel.WornApparel[i].def))
                 {
                     continue;
                 }
 
-                foreach (var ApparelItem in owner.apparel.WornApparel[i].def.thingCategories)
-                {
-                    if (ApparelItem.defName == "Shield")
-                    {
-                        wornshield = owner.apparel.WornApparel[i];
-                    }
-                }
+                wornshield = owner.apparel.WornApparel[i];
             }
 
             // we have a shield equipped
@@ -229,98 +267,57 @@ internal class Harmonypatches
     // check if a pawn has a shield equipped
     public static bool PawnHasShieldEquiped(Pawn pawn)
     {
-        var revalue = false;
-
-        Apparel shield = null;
         // do we have a shield equipped
-        foreach (var a in pawn.apparel.WornApparel)
+        foreach (var apparel in pawn.apparel.WornApparel)
         {
-            if (a.def.thingCategories == null)
+            if (!IsShield(apparel.def))
             {
                 continue;
             }
 
-            foreach (var ApparelItem in a.def.thingCategories)
-            {
-                if (ApparelItem.defName == "Shield")
-                {
-                    shield = a;
-                }
-            }
+            return true;
         }
 
-        // we have a shield equipped
-        if (shield != null)
-        {
-            revalue = true;
-        }
-
-        return revalue;
+        return false;
     }
 
     // check if a pawn has a shield equipped
-    public static Apparel GetPawnSheild(Pawn pawn)
+    public static Apparel GetPawnShield(Pawn pawn)
     {
-        Apparel shield = null;
         // do we have a shield equipped
-        foreach (var a in pawn.apparel.WornApparel)
+        foreach (var apparel in pawn.apparel.WornApparel)
         {
-            foreach (var ApparelItem in a.def.thingCategories)
+            if (!IsShield(apparel.def))
             {
-                if (ApparelItem.defName == "Shield")
-                {
-                    shield = a;
-                }
+                continue;
             }
+
+            return apparel;
         }
 
-        return shield;
+        return null;
     }
 
     // check if a pawn has a shield in inventory
     public static bool PawnHasShieldInInventory(Pawn pawn)
     {
-        var revalue = false;
-
-        foreach (var a in pawn.inventory.innerContainer)
+        foreach (var thing in pawn.inventory.innerContainer)
         {
-            if (a.def.thingCategories == null)
+            if (!IsShield(thing.def))
             {
                 continue;
             }
 
-            foreach (var ApparelItem in a.def.thingCategories)
-            {
-                // we have a shield in the inventory
-                if (ApparelItem.defName == "Shield")
-                {
-                    revalue = true;
-                }
-            }
+            return true;
         }
 
-        return revalue;
+        return false;
     }
 
     // check if the pawn picked up a shield
     public static bool PawnPickedUpAShield(ThingWithComps newEquipment)
     {
-        var reValue = false;
-
-        if (newEquipment.def.thingCategories == null)
-        {
-            return false;
-        }
-
-        foreach (var ApparelItem in newEquipment.def.thingCategories)
-        {
-            if (ApparelItem.defName == "Shield")
-            {
-                reValue = true;
-            }
-        }
-
-        return reValue;
+        return IsShield(newEquipment.def);
     }
 
     // check if equiped weapon can be used with shield
@@ -344,7 +341,7 @@ internal class Harmonypatches
             return true;
         }
 
-        if (GetPawnSheild(pawn)?.def.apparel.tags.Contains("Light_Shield") ?? false)
+        if (GetPawnShield(pawn)?.def.apparel.tags.Contains("Light_Shield") ?? false)
         {
             // if this is a light shield only allow light sidearms
             return pawn.equipment.Primary.def.weaponTags.Any(t => t == "LightShield_Sidearm");
@@ -354,5 +351,18 @@ internal class Harmonypatches
         return !pawn.equipment.Primary.def.IsRangedWeapon &&
                !pawn.equipment.Primary.def.weaponTags.Any(
                    t => t is "Shield_NoSidearm" or "LightShield_Sidearm");
+    }
+
+    public static bool IsShield(ThingDef thingDef)
+    {
+        var returnValue = thingDef.thingClass == typeof(ColorableShield);
+
+        if (returnValue)
+        {
+            return true;
+        }
+
+        return thingDef.thingCategories != null &&
+               thingDef.thingCategories.Any(thingCategoryDef => thingCategoryDef.defName == "Shield");
     }
 }

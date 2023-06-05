@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <CombatShields.modVersion>Installed mod-version: {0}</CombatShields.modVersion>
+  <CombatShields.usablewith>Usable with</CombatShields.usablewith>
+  <CombatShields.usewithshields>Shields</CombatShields.usewithshields>
+  <CombatShields.usewithlightshields>Light shields</CombatShields.usewithlightshields>
+  <CombatShields.search>Search: </CombatShields.search>
+  <CombatShields.reset>Reset</CombatShields.reset>
+  <CombatShields.allreset>All settings reset</CombatShields.allreset>
+  <CombatShields.searchtt>Search for weapon name or mod-name</CombatShields.searchtt>
+</LanguageData>
