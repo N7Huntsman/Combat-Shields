@@ -20,15 +20,14 @@ internal class JobDriver_EquipShield : JobDriver
     {
         var toil = new Toil();
         // do we have a shield equipped
-        foreach (var a in pawn.apparel.WornApparel)
+        foreach (var apparel in pawn.apparel.WornApparel)
         {
-            foreach (var tgd in a.def.thingCategories)
+            if (!Harmonypatches.IsShield(apparel.def))
             {
-                if (tgd.defName == "Shield")
-                {
-                    pawn.inventory.innerContainer.TryAddOrTransfer(a, false);
-                }
+                continue;
             }
+
+            pawn.inventory.innerContainer.TryAddOrTransfer(apparel, false);
         }
 
         return toil;

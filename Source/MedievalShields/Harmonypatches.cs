@@ -144,48 +144,48 @@ internal class Harmonypatches
                     ThingPlaceMode.Direct, out var whocares);
                 owner.apparel.Wear(whocares as Apparel);
             }
+
+            return;
         }
-        else
+
+        if (!PawnHasShieldEquiped(owner) || PawnHasValidEquipped(owner))
         {
-            if (!PawnHasShieldEquiped(owner) || PawnHasValidEquipped(owner))
-            {
-                return;
-            }
-
-            Apparel shield = null;
-            // do we have a shield equipped
-
-            for (var i = 0; i < owner.inventory.innerContainer.Count; i++)
-            {
-                if (!IsShield(owner.inventory.innerContainer[i].def))
-                {
-                    continue;
-                }
-
-                __instance.pawn.inventory.innerContainer.TryDrop(
-                    owner.inventory.innerContainer[i], ThingPlaceMode.Direct, out _);
-            }
-
-            for (var i = 0; i < owner.apparel.WornApparelCount; i++)
-            {
-                if (!IsShield(owner.apparel.WornApparel[i].def))
-                {
-                    continue;
-                }
-
-                shield = owner.apparel.WornApparel[i];
-                break;
-            }
-
-            // we have a shield equipped
-            if (shield == null)
-            {
-                return;
-            }
-
-            owner.apparel.Remove(shield);
-            owner.inventory.innerContainer.TryAddOrTransfer(shield, false);
+            return;
         }
+
+        Apparel shield = null;
+        // do we have a shield equipped
+
+        for (var i = 0; i < owner.inventory.innerContainer.Count; i++)
+        {
+            if (!IsShield(owner.inventory.innerContainer[i].def))
+            {
+                continue;
+            }
+
+            __instance.pawn.inventory.innerContainer.TryDrop(
+                owner.inventory.innerContainer[i], ThingPlaceMode.Direct, out _);
+        }
+
+        for (var i = 0; i < owner.apparel.WornApparelCount; i++)
+        {
+            if (!IsShield(owner.apparel.WornApparel[i].def))
+            {
+                continue;
+            }
+
+            shield = owner.apparel.WornApparel[i];
+            break;
+        }
+
+        // we have a shield equipped
+        if (shield == null)
+        {
+            return;
+        }
+
+        owner.apparel.Remove(shield);
+        owner.inventory.innerContainer.TryAddOrTransfer(shield, false);
     }
 
     public static void ShieldPatchWearApparel(Pawn_EquipmentTracker __instance, Apparel newApparel)
@@ -281,7 +281,7 @@ internal class Harmonypatches
         return false;
     }
 
-    // check if a pawn has a shield equipped
+    // get pawns shield equipped or in inventory
     public static Apparel GetPawnShield(Pawn pawn)
     {
         // do we have a shield equipped
@@ -293,6 +293,16 @@ internal class Harmonypatches
             }
 
             return apparel;
+        }
+
+        foreach (var thing in pawn.inventory.innerContainer)
+        {
+            if (!IsShield(thing.def))
+            {
+                continue;
+            }
+
+            return thing as Apparel;
         }
 
         return null;
@@ -323,39 +333,38 @@ internal class Harmonypatches
     // check if equiped weapon can be used with shield
     public static bool PawnHasValidEquipped(Pawn pawn)
     {
-        if (pawn.equipment == null)
+        // Can always use shield without a weapon
+        if (pawn.equipment?.Primary == null)
         {
-            // can use shield without a weapon
+            return true;
+        }
+
+        // If the weapon allows all shields any shield is ok
+        if (pawn.equipment.Primary.def.weaponTags.Any(t => t == "Shield_Sidearm"))
+        {
+            return true;
+        }
+
+        // If this is a light sidearm only allow light shield
+        if (pawn.equipment.Primary.def.weaponTags.Any(t => t == "LightShield_Sidearm"))
+        {
+            return GetPawnShield(pawn)?.def.apparel.tags.Contains("Light_Shield") == true;
+        }
+
+        // Don't allow the remaining ranged weapons
+        if (pawn.equipment.Primary.def.IsRangedWeapon)
+        {
             return false;
         }
 
-        if (pawn.equipment.Primary == null)
-        {
-            // can use shield without a weapon
-            return true;
-        }
-
-        if (pawn.equipment.Primary.def.weaponTags.Any(t => t == "Shield_Sidearm"))
-        {
-            // if a weapon is a light sidearm and a shield is a light shield return true
-            return true;
-        }
-
-        if (GetPawnShield(pawn)?.def.apparel.tags.Contains("Light_Shield") ?? false)
-        {
-            // if this is a light shield only allow light sidearms
-            return pawn.equipment.Primary.def.weaponTags.Any(t => t == "LightShield_Sidearm");
-        }
-
-        // by default don't allow ranged weapons or weapons with Shield_NoSidearm or "LightShield_Sidearm without a light shield"
-        return !pawn.equipment.Primary.def.IsRangedWeapon &&
-               !pawn.equipment.Primary.def.weaponTags.Any(
-                   t => t is "Shield_NoSidearm" or "LightShield_Sidearm");
+        // Allow all melee unless it cannot be used with a shield
+        return !pawn.equipment.Primary.def.weaponTags.Contains("Shield_NoSidearm");
     }
 
     public static bool IsShield(ThingDef thingDef)
     {
-        var returnValue = thingDef.thingClass == typeof(ColorableShield);
+        var returnValue = thingDef.thingClass.IsSubclassOf(typeof(Apparel_Shield)) ||
+                          thingDef.thingClass == typeof(Apparel_Shield);
 
         if (returnValue)
         {
