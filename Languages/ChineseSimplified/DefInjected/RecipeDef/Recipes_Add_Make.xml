@@ -40,4 +40,8 @@
   <Make_Apparel_BallisticShield.label>制作防弹盾牌</Make_Apparel_BallisticShield.label>
   <Make_Apparel_BallisticShield.description>制作防弹盾牌。</Make_Apparel_BallisticShield.description>
   <Make_Apparel_BallisticShield.jobString>正在制作防弹盾牌。</Make_Apparel_BallisticShield.jobString>
+  <Make_Apparel_TacShield.description>制作战术盾牌。</Make_Apparel_TacShield.description>
+  <Make_Apparel_TacShield.jobString>正在制作战术盾牌。</Make_Apparel_TacShield.jobString>
+  <Make_Apparel_ImperialShield.description>制作甲壳盾牌。</Make_Apparel_ImperialShield.description>
+  <Make_Apparel_ImperialShield.jobString>正在制作甲壳盾牌。</Make_Apparel_ImperialShield.jobString>
 </LanguageData>
