@@ -1,5 +1,8 @@
 # Changelog for CombatShields
 
+1.4.5 - Updated chinese translation, thanks VanKaikai
+
+
 1.4.4 - Fixed shield logic that was a bit all over the place
 
 
