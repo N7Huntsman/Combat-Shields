@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using RimWorld;
-using UnityEngine;
 using Verse;
-using Random = System.Random;
 
 namespace CombatShields;
 
 public class ColorableShield : Apparel_Shield
 {
+    private Graphic wornGraphic;
+
     public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
     {
         if (dinfo.Instigator == null)
@@ -17,8 +17,7 @@ public class ColorableShield : Apparel_Shield
         }
 
         var melee = Wearer.skills.GetSkill(SkillDefOf.Melee);
-        var random = new Random();
-        var chance = random.Next(0, 21);
+        var chance = Rand.Range(0, 21);
 
         if (chance >= melee.levelInt)
         {
@@ -50,17 +49,14 @@ public class ColorableShield : Apparel_Shield
 
     public override void DrawWornExtras()
     {
-        base.DrawWornExtras();
-
         if (!ShouldDisplay)
         {
             return;
         }
 
-        var num = 0f;
         var vector = Wearer.Drawer.DrawPos;
         vector.y = AltitudeLayer.Pawn.AltitudeFor();
-        var s = new Vector3(1f, 1f, 1f);
+        var rotation = Rot4.North;
         if (Wearer.Rotation == Rot4.North)
         {
             vector.y = AltitudeLayer.Item.AltitudeFor();
@@ -76,23 +72,24 @@ public class ColorableShield : Apparel_Shield
         else if (Wearer.Rotation == Rot4.East)
         {
             vector.z -= 0.2f;
-            num = 90f;
+            rotation = Rot4.East;
         }
         else if (Wearer.Rotation == Rot4.West)
         {
             vector.y = AltitudeLayer.MoteOverhead.AltitudeFor();
             vector.z -= 0.2f;
-            num = 270f;
+            rotation = Rot4.West;
         }
 
-        if (shieldMat == null)
+        if (wornGraphic == null)
         {
-            shieldMat = MaterialPool.MatFrom(def.graphicData.texPath);
+            var wornGraphicData = new GraphicData();
+            wornGraphicData.CopyFrom(def.graphicData);
+            wornGraphicData.onGroundRandomRotateAngle = 0f;
+            wornGraphicData.drawRotated = true;
+            wornGraphic = wornGraphicData.GraphicColoredFor(this);
         }
 
-        shieldMat.color = Stuff.stuffProps.color;
-        var matrix = default(Matrix4x4);
-        matrix.SetTRS(vector, Quaternion.AngleAxis(num, Vector3.up), s);
-        Graphics.DrawMesh(MeshPool.plane10, matrix, shieldMat, 0);
+        wornGraphic.Draw(vector, rotation, this);
     }
 }

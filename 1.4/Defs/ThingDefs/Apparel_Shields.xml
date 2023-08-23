@@ -326,7 +326,7 @@
   <ThingDef ParentName="Buckler_Shield">
     <defName>Apparel_BucklerShield</defName>
     <label>buckler</label>
-    <description>An extremely small metal shield, usually paired with a rapier or similiarly light sword. Too small to offer any meaningful protection from incoming projectiles, the buckler is instead designed to deflect and trap a foe's weapon in close-quarters combat.</description>
+    <description>An extremely small metal shield, usually paired with a rapier or similarly light sword. Too small to offer any meaningful protection from incoming projectiles, the buckler is instead designed to deflect and trap a foe's weapon in close-quarters combat.</description>
     <graphicData>
       <texPath>Buckler_Shield</texPath>
       <graphicClass>Graphic_Single</graphicClass>
