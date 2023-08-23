@@ -1,5 +1,8 @@
 # Changelog for CombatShields
 
+1.4.6 - Shields can now be relics
+
+
 1.4.5 - Updated chinese translation, thanks VanKaikai
 
 

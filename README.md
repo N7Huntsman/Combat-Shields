@@ -148,4 +148,4 @@ All the folks on the Rimworld discord for their endless patience and help.
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2983650634]Last updated 2023-06-08
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2983650634]Last updated 2023-08-23

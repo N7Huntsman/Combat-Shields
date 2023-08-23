@@ -31,6 +31,8 @@
         <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
         <minQualityForArtistic>Excellent</minQualityForArtistic>
       </li>
+      <li Class="CompProperties_Styleable">
+      </li>
     </comps>
     <inspectorTabs>
       <li>ITab_Art</li>
@@ -38,6 +40,7 @@
     <thingCategories>
       <li>Shield</li>
     </thingCategories>
+    <relicChance>1</relicChance>
     <apparel>
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <bodyPartGroups>
