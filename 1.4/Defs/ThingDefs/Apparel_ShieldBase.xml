@@ -42,6 +42,7 @@
     </thingCategories>
     <relicChance>1</relicChance>
     <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <careIfWornByCorpse>false</careIfWornByCorpse>
       <bodyPartGroups>
         <li>LeftHand</li>

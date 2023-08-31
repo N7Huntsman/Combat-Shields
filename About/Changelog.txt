@@ -1,5 +1,8 @@
 # Changelog for CombatShields
 
+1.4.8 - Shields does not count as clothing for nudists
+
+
 1.4.7 - Reworked the shield worn-drawer, should no longer use the same stuff color for all currently equipped shields.
 
 
