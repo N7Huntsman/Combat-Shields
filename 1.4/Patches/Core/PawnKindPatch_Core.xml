@@ -2,28 +2,58 @@
 <Patch>
   <!-- Allow some pawns to spawn with shields -->
   <!-- Tribal -->
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/PawnKindDef[defName="Tribal_Warrior"]</xpath>
-    <value>
-      <apparelTags>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Warrior"]/apparelTags</xpath>
+    <success>Always</success>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Warrior"]/apparelTags</xpath>
+      <value>
         <li>Shield_Neolithic</li>
-      </apparelTags>
-    </value>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Warrior"]</xpath>
+      <value>
+        <apparelTags>
+          <li>Shield_Neolithic</li>
+        </apparelTags>
+      </value>
+    </nomatch>
   </Operation>
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]</xpath>
-    <value>
-      <apparelTags>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]/apparelTags</xpath>
+    <success>Always</success>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]/apparelTags</xpath>
+      <value>
         <li>Shield_Neolithic</li>
-      </apparelTags>
-    </value>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_Berserker"]</xpath>
+      <value>
+        <apparelTags>
+          <li>Shield_Neolithic</li>
+        </apparelTags>
+      </value>
+    </nomatch>
   </Operation>
-  <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/PawnKindDef[defName="Tribal_ChiefMelee"]</xpath>
-    <value>
-      <apparelTags>
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/PawnKindDef[defName="Tribal_ChiefMelee"]/apparelTags</xpath>
+    <success>Always</success>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_ChiefMelee"]/apparelTags</xpath>
+      <value>
         <li>Shield_Classical</li>
-      </apparelTags>
-    </value>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/PawnKindDef[defName="Tribal_ChiefMelee"]</xpath>
+      <value>
+        <apparelTags>
+          <li>Shield_Classical</li>
+        </apparelTags>
+      </value>
+    </nomatch>
   </Operation>
 </Patch>

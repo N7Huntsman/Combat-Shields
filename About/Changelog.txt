@@ -1,5 +1,8 @@
 # Changelog for CombatShields
 
+1.4.9 - Made the pawnkinds patches conditional for better compatibility
+
+
 1.4.8 - Shields does not count as clothing for nudists
 
 
