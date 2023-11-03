@@ -32,7 +32,8 @@ public class Apparel_Shield : Apparel
 
     public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
     {
-        if (dinfo.Instigator == null)
+        if (dinfo.Instigator == null || dinfo.Def == DamageDefOf.Extinguish || dinfo.Def == DamageDefOf.Smoke ||
+            dinfo.Def == DamageDefOf.ToxGas)
         {
             return false;
         }
@@ -70,13 +71,10 @@ public class Apparel_Shield : Apparel
 
     public override void DrawWornExtras()
     {
-        // base.DrawWornExtras();
-
         if (!ShouldDisplay)
         {
             return;
         }
-        // base.DrawWornExtras();
 
         var num = 0f;
         var vector = Wearer.Drawer.DrawPos;

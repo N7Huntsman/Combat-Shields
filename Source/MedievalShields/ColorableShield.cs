@@ -11,7 +11,8 @@ public class ColorableShield : Apparel_Shield
 
     public override bool CheckPreAbsorbDamage(DamageInfo dinfo)
     {
-        if (dinfo.Instigator == null)
+        if (dinfo.Instigator == null || dinfo.Def == DamageDefOf.Extinguish || dinfo.Def == DamageDefOf.Smoke ||
+            dinfo.Def == DamageDefOf.ToxGas)
         {
             return false;
         }
