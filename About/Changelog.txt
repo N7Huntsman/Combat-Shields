@@ -1,0 +1,33 @@
+# Changelog for CombatShields
+
+1.4.10 - Will no longer cause durability loss for firefoam, toxic and smoke projectiles.
+
+
+1.4.9 - Made the pawnkinds patches conditional for better compatibility
+
+
+1.4.8 - Shields does not count as clothing for nudists
+
+
+1.4.7 - Reworked the shield worn-drawer, should no longer use the same stuff color for all currently equipped shields.
+
+
+1.4.6 - Shields can now be relics
+
+
+1.4.5 - Updated chinese translation, thanks VanKaikai
+
+
+1.4.4 - Fixed shield logic that was a bit all over the place
+
+
+1.4.3 - Added settings for ranged weapons
+Now checks for shields thingclass as well as category to support mods that changes categories for things.
+Used DeepL to update translations for ChineseSimplified, French, German, Japanese
+
+
+1.4.2 - Changed to conditional patches
+
+
+1.4.1 - Updated for 1.4
+
