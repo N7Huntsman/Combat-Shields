@@ -56,6 +56,9 @@
     <alwaysHaulable>True</alwaysHaulable>
     <tickerType>Never</tickerType>
     <smeltable>True</smeltable>
+    <tradeTags>
+      <li>Armor</li>
+    </tradeTags>
   </ThingDef>
   <!-- Makeable Shield -->
   <ThingDef Name="Shield_MakeableBase" ParentName="Apparel_ShieldBase" Abstract="True">

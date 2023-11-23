@@ -1,5 +1,8 @@
 # Changelog for CombatShields
 
+1.4.11 - All shields should now be tradeable similar to armor
+
+
 1.4.10 - Will no longer cause durability loss for firefoam, toxic and smoke projectiles.
 
 
