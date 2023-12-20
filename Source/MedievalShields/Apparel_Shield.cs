@@ -16,7 +16,7 @@ public class Apparel_Shield : Apparel
     public Vector3 impactAngleVect;
     public Material shieldMat;
 
-    public bool ShouldDisplay
+    protected bool ShouldDisplay
     {
         get
         {

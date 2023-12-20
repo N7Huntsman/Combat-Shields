@@ -148,6 +148,10 @@ internal class CombatShieldsMod : Mod
             DrawIcon(rangedWeapon, new Rect(rowRect.position, iconSize));
             var nameRect = new Rect(rowRect.position + new Vector2(iconSize.x, 0),
                 rowRect.size - new Vector2(iconSize.x * 2, 0));
+            if (rangedWeapon.weaponTags == null)
+            {
+                rangedWeapon.weaponTags = [];
+            }
 
             var canBeUsed = rangedWeapon.weaponTags.Contains("Shield_Sidearm");
             var couldBeUsed = canBeUsed;
@@ -272,7 +276,7 @@ internal class CombatShieldsMod : Mod
         {
             if (rangedWeapon.weaponTags == null)
             {
-                rangedWeapon.weaponTags = new List<string>();
+                rangedWeapon.weaponTags = [];
             }
 
             if (Harmonypatches.AllBaseShieldableWeapons.Contains(rangedWeapon))

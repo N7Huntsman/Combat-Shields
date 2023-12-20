@@ -51,7 +51,7 @@ internal class Harmonypatches
                 {
                     if (weapon.weaponTags == null)
                     {
-                        weapon.weaponTags = new List<string>();
+                        weapon.weaponTags = [];
                     }
 
                     if (weapon.weaponTags.Contains("Shield_Sidearm"))
@@ -92,7 +92,7 @@ internal class Harmonypatches
             {
                 if (weapon.weaponTags == null)
                 {
-                    weapon.weaponTags = new List<string>();
+                    weapon.weaponTags = [];
                 }
 
                 if (weapon.weaponTags.Contains("LightShield_Sidearm"))

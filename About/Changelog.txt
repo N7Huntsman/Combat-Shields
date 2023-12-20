@@ -1,5 +1,8 @@
 # Changelog for CombatShields
 
+1.4.12 - Fix for weapons that do not have any weapon-tags defined
+
+
 1.4.11 - All shields should now be tradeable similar to armor
 
 
