@@ -541,6 +541,7 @@
       </recipeUsers>
     </recipeMaker>
     <statBases>
+      <WorkToMake>25000</WorkToMake>
       <Mass>5</Mass>
       <MaxHitPoints>800</MaxHitPoints>
       <DeteriorationRate>0</DeteriorationRate>

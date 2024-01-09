@@ -1,5 +1,8 @@
 # Changelog for CombatShields
 
+1.4.13 - Fixed workamount for the carapace shield
+
+
 1.4.12 - Fix for weapons that do not have any weapon-tags defined
 
 
