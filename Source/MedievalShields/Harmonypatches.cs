@@ -21,10 +21,10 @@ internal class Harmonypatches
 
     static Harmonypatches()
     {
-        var h = new Harmony("ShieldHarmony");
-        h.Patch(AccessTools.Method(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.AddEquipment)),
+        var harmony = new Harmony("ShieldHarmony");
+        harmony.Patch(AccessTools.Method(typeof(Pawn_EquipmentTracker), nameof(Pawn_EquipmentTracker.AddEquipment)),
             postfix: new HarmonyMethod(shieldPatchType, nameof(ShieldPatchAddEquipment)));
-        h.Patch(AccessTools.Method(typeof(Pawn_ApparelTracker), nameof(Pawn_ApparelTracker.Wear)),
+        harmony.Patch(AccessTools.Method(typeof(Pawn_ApparelTracker), nameof(Pawn_ApparelTracker.Wear)),
             postfix: new HarmonyMethod(shieldPatchType, nameof(ShieldPatchWearApparel)));
 
         AllRangedWeapons = DefDatabase<ThingDef>.AllDefsListForReading
